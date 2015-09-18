@@ -10,7 +10,7 @@ public class MyFirstClass {
 
         int age = 31;
 
-        System.out.println("Before changes" + maxBirthYear);
+        System.out.println("Before changes " + maxBirthYear);
 
         //maxBirthYear = 2015;
 
@@ -19,7 +19,7 @@ public class MyFirstClass {
 
         System.out.println("31" + 31);
         System.out.println(31 +31);
-        System.out.println("After changes" + maxBirthYear);
+        System.out.println("After changes " + maxBirthYear);
 
     }
 
