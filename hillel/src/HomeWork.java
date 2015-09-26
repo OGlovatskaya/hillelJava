@@ -49,12 +49,13 @@ public class HomeWork {
 
         System.out.println("Please enter rectangle perimeter: ");
         double rectanglePerimeter = rectangle.nextDouble();
-        rectanglePerimeter = rectanglePerimeter / (-2);
+
 
         System.out.println("Please enter rectangle area: ");
         double rectangleArea = rectangle.nextDouble();
 
-        double discriminant = (Math.pow(rectanglePerimeter, 2) - 4 * rectangleArea);
+        double halfPerimeter = rectanglePerimeter / (-2);
+        double discriminant = (Math.pow(halfPerimeter, 2) - 4 * rectangleArea);
 
         double rectangleLength;
         double rectangleHeight;
@@ -63,8 +64,8 @@ public class HomeWork {
             System.out.println("Rectangle with such parameters does not exist");
 
         } else {
-            rectangleLength = ((rectanglePerimeter * (-1)) + Math.sqrt(discriminant)) / 2;
-            rectangleHeight = ((rectanglePerimeter * (-1)) - Math.sqrt(discriminant)) / 2;
+            rectangleLength = ((halfPerimeter * (-1)) + Math.sqrt(discriminant)) / 2;
+            rectangleHeight = ((halfPerimeter * (-1)) - Math.sqrt(discriminant)) / 2;
             System.out.println("Rectangle length is " + rectangleLength);
             System.out.println("Rectangle height is " + rectangleHeight);
         }
