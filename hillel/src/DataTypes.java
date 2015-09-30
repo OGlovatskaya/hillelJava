@@ -23,7 +23,7 @@ public class DataTypes {
         System.out.println("PI is: " + i);
 
         i = (int) 3.9;
-        System.out.println("3.9 after converting: " + 1);
+        System.out.println("3.9 after converting: " + i);
 
 
         //realNumberComparion();
