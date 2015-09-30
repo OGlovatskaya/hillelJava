@@ -18,15 +18,20 @@ public class Calculator {
         System.out.println("Enter the number: ");
         double number = scanner.nextDouble();
 
+
+
         System.out.println("Enter the operation: ");
         String operation = scanner.next();
 
         double intPartNumber;
         double result = 0;
 
+
         String dataType = "(byte)";
 
+
         switch (operation) {
+
             case "trunk":
                 result = Math.floor(number);
                 System.out.println("Result: " + result);
@@ -36,11 +41,31 @@ public class Calculator {
                 result = number - intPartNumber;
                 System.out.println("Result: " + result);
                 break;
-            default:
+            case "-":
                 System.out.println("Enter second number: ");
+                double secondNumber = scanner.nextDouble();
+                result = number - secondNumber;
+                System.out.println("Result: " + result + " " + dataType);
+            case "+":
+                System.out.println("Enter second number: ");
+                secondNumber = scanner.nextDouble();
+                result = number + secondNumber;
+                System.out.println("Result: " + result + " " + dataType);
+                break;
+            case "/":
+                System.out.println("Enter second number: ");
+                secondNumber = scanner.nextDouble();
+                result = number / secondNumber;
+                System.out.println("Result: " + result + " " + dataType);
+                break;
+            case "*":
+                System.out.println("Enter second number: ");
+                secondNumber = scanner.nextDouble();
+                result = number * secondNumber;
+                System.out.println("Result: " + result + " " + dataType);
                 break;
         }
-        double secondNumber = scanner.nextDouble();
+
 
         if (result >= -128 && result <= 127){
             dataType = "(byte)";
@@ -54,25 +79,7 @@ public class Calculator {
             dataType = "(double)";
         }
 
-        switch (operation) {
-            case "-":
-                result = number - secondNumber;
-                System.out.println("Result: " + result + " " + dataType);
-                break;
-            case "+":
-                result = number + secondNumber;
-                System.out.println("Result: " + result + " " + dataType);
-                break;
-            case "/":
-                result = number / secondNumber;
-                System.out.println("Result: " + result + " " + dataType);
-                break;
-            case "*":
-                result = number * secondNumber;
-                System.out.println("Result: " + result + " " + dataType);
-                break;
-        }
-
 
     }
 }
+
