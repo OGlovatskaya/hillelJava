@@ -22,7 +22,7 @@ public class Calculator {
         String operation = scanner.next();
 
         double intPartNumber;
-        double result;
+        double result = 0;
 
         String dataType = "(byte)";
 
