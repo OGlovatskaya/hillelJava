@@ -18,18 +18,13 @@ public class Calculator {
         System.out.println("Enter the number: ");
         double number = scanner.nextDouble();
 
-
-
         System.out.println("Enter the operation: ");
         String operation = scanner.next();
 
         double intPartNumber;
         double result = 0;
 
-
         String dataType = "(byte)";
-
-
 
         switch (operation) {
 
@@ -62,7 +57,9 @@ public class Calculator {
                 break;
         }
 
-        if (result >= -128 && result <= 127){
+        if ((result - Math.floor(result)) > 0 && result >=1.7e-308 && result <=1.7e308){
+            dataType = "(double)";
+        }else if (result >= -128 && result <= 127){
             dataType = "(byte)";
         }else if(result >= -32768 && result <=32767){
             dataType = "(short)";
@@ -70,12 +67,9 @@ public class Calculator {
             dataType = "(int)";
         }else if(result >= -922372036854775808L && result <=922372036854775807L){
             dataType = "(long)";
-        }else if (result >= 1.7e-308 && result <=1.7e308){
-            dataType = "(double)";
         }
 
         System.out.println("Result: " + result + " " + dataType);
-
 
     }
 }
