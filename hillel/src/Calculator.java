@@ -30,42 +30,37 @@ public class Calculator {
         String dataType = "(byte)";
 
 
+
         switch (operation) {
 
             case "trunk":
                 result = Math.floor(number);
-                System.out.println("Result: " + result);
                 break;
             case "fract":
                 intPartNumber = (Math.floor(number));
                 result = number - intPartNumber;
-                System.out.println("Result: " + result);
                 break;
             case "-":
                 System.out.println("Enter second number: ");
                 double secondNumber = scanner.nextDouble();
                 result = number - secondNumber;
-                System.out.println("Result: " + result + " " + dataType);
+                break;
             case "+":
                 System.out.println("Enter second number: ");
                 secondNumber = scanner.nextDouble();
                 result = number + secondNumber;
-                System.out.println("Result: " + result + " " + dataType);
                 break;
             case "/":
                 System.out.println("Enter second number: ");
                 secondNumber = scanner.nextDouble();
                 result = number / secondNumber;
-                System.out.println("Result: " + result + " " + dataType);
                 break;
             case "*":
                 System.out.println("Enter second number: ");
                 secondNumber = scanner.nextDouble();
                 result = number * secondNumber;
-                System.out.println("Result: " + result + " " + dataType);
                 break;
         }
-
 
         if (result >= -128 && result <= 127){
             dataType = "(byte)";
@@ -78,6 +73,8 @@ public class Calculator {
         }else if (result >= 1.7e-308 && result <=1.7e308){
             dataType = "(double)";
         }
+
+        System.out.println("Result: " + result + " " + dataType);
 
 
     }
