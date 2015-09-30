@@ -21,23 +21,26 @@ public class Calculator {
         System.out.println("Enter the operation: ");
         String operation = scanner.next();
 
+        double intPartNumber;
+        double result;
+
+        String dataType = "(byte)";
+
         switch (operation) {
             case "trunk":
-                System.out.println("Result: " + Math.floor(number));
+                result = Math.floor(number);
+                System.out.println("Result: " + result);
                 break;
             case "fract":
-                double intPartNumber = (Math.floor(number));
-                double newNumber = number - intPartNumber;
-                System.out.println("Result: " + newNumber);
+                intPartNumber = (Math.floor(number));
+                result = number - intPartNumber;
+                System.out.println("Result: " + result);
                 break;
             default:
                 System.out.println("Enter second number: ");
                 break;
         }
         double secondNumber = scanner.nextDouble();
-
-        double result = 0;
-        String dataType = "(byte)";
 
         if (result >= -128 && result <= 127){
             dataType = "(byte)";
@@ -50,7 +53,6 @@ public class Calculator {
         }else if (result >= 1.7e-308 && result <=1.7e308){
             dataType = "(double)";
         }
-
 
         switch (operation) {
             case "-":
