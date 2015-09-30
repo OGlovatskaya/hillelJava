@@ -36,25 +36,41 @@ public class Calculator {
         }
         double secondNumber = scanner.nextDouble();
 
-        double result;
+        double result = 0;
+        String dataType = "(byte)";
+
+        if (result >= -128 && result <= 127){
+            dataType = "(byte)";
+        }else if(result >= -32768 && result <=32767){
+            dataType = "(short)";
+        }else if(result >= -2147483648 && result <=2147483647){
+            dataType = "(int)";
+        }else if(result >= -922372036854775808L && result <=922372036854775807L){
+            dataType = "(long)";
+        }else if (result >= 1.7e-308 && result <=1.7e308){
+            dataType = "(double)";
+        }
+
 
         switch (operation) {
             case "-":
                 result = number - secondNumber;
-                System.out.println("Result: " + result);
+                System.out.println("Result: " + result + " " + dataType);
                 break;
             case "+":
                 result = number + secondNumber;
-                System.out.println("Result: " + result);
+                System.out.println("Result: " + result + " " + dataType);
                 break;
             case "/":
                 result = number / secondNumber;
-                System.out.println("Result: " + result);
+                System.out.println("Result: " + result + " " + dataType);
                 break;
             case "*":
                 result = number * secondNumber;
-                System.out.println("Result: " + result);
+                System.out.println("Result: " + result + " " + dataType);
                 break;
         }
+
+
     }
 }
