@@ -8,17 +8,45 @@ import java.util.Scanner;
 public class WorkFlowControl {
     public static void main(String[] args) {
 
-        ternaryExample();
-
+        double d = 2.0;
+        isEven((int) d);
+        isEven((int) d, true);
+        //notOperatorExample();
         //caseWithStringsExample();
         //switchCaseExample();
         //ifExample();
+    }
+
+    private static void notOperatorExample() {
+        boolean todayIsThursday= true;
+        boolean iShouldStudyJava = true;
+        todayIsThursday = !(todayIsThursday && iShouldStudyJava);
+
+        boolean isEven = !isOdd(10);
     }
 
     private static void ternaryExample() {
         int number = 5;
         String isEven = isEven(number);
         isEven = (number % 2 ==0) ? "yes" : "no";  //тернарный оператор
+    }
+
+    private static boolean isOdd (int someNumber) {
+        System.out.println("int");
+        if(someNumber % 2 !=0){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    public static String isEven(int someNumber, boolean someAnotherParam){
+        System.out.println("int with double");
+        if(someNumber % 2 ==0){
+            return "yes";
+        }else {
+            return "no";
+        }
     }
 
     public static String isEven(int someNumber){
@@ -29,6 +57,14 @@ public class WorkFlowControl {
         }
     }
 
+    public static boolean isEven(double someNumber){
+        System.out.println("double");
+        if(someNumber % 2 ==0){
+            return true;
+        }else {
+            return false;
+        }
+    }
     private static void caseWithStringsExample() {
         String month = "mar";
         switch (month) {
