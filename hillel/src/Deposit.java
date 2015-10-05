@@ -21,14 +21,12 @@ public class Deposit {
         System.out.println("Desirable amount: ");
         double desirableAmount = scanner.nextDouble();
 
-        int periodCounter = 0;
+        int periodCounter;
         int periodCounter1 = 0;
 
-        do {
+        for (periodCounter = 0; periodCounter < depositDuration; periodCounter++){
             deposit += deposit * interestRate / 100 / 12;
-            periodCounter++;
-
-        } while (periodCounter < depositDuration);
+        }
 
         double roundDepositAmount = new BigDecimal(deposit).setScale(2, RoundingMode.UP).doubleValue();
         System.out.println("The amount of deposit in " + depositDuration + " months " + " will be " + roundDepositAmount);
