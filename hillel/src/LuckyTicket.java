@@ -7,7 +7,7 @@ public class LuckyTicket {
         int ticketNumber;
         int LuckyNumberCounter = 0;
 
-    for(ticketNumber = 000001; ticketNumber < 1000000; ticketNumber++) {
+    for(ticketNumber = 1; ticketNumber < 1000000; ticketNumber++) {
         int left1 = ticketNumber / 100000 % 10;
         int left2 = ticketNumber / 10000 % 10;
         int left3 = ticketNumber / 1000 % 10;
