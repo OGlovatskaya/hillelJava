@@ -7,7 +7,8 @@ public class Encryption {
         String message = "Secret message";
         char key = 'f';
         System.out.println("Original message: " + message);
-        crypt(message, key);
+        System.out.println("Encrypted message: " + (message = crypt(message, key)));
+        System.out.println("Decrypted message: " + crypt(message, key));
     }
 
     public static String crypt(String message, char key) {
@@ -17,15 +18,6 @@ public class Encryption {
             cryptedMessage[i] = ((char) (cryptedMessage[i] ^ key));
         }
         String cryptMessage = String.copyValueOf(cryptedMessage);
-        System.out.println("Encrypted message: " + cryptMessage);
-
-        char[] unCryptedtMassage = cryptMessage.toCharArray();
-        for (int i = 0; i < unCryptedtMassage.length; i++) {
-            unCryptedtMassage[i] = ((char) (unCryptedtMassage[i] ^ key));
-        }
-        String unCryptMessage = String.copyValueOf(unCryptedtMassage);
-        System.out.println("Decrypted message: " + unCryptMessage);
-
         return cryptMessage;
     }
 
