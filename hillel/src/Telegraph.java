@@ -16,7 +16,11 @@ public class Telegraph {
         String[] splMessage = message.split(" ");
         int messageLength = splMessage.length;
 
-        double priceForTheMessage = price * messageLength;
+        double priceForTheMessage = 0;
+
+        for (int i = 0; i <= messageLength ; i++){
+            priceForTheMessage = i * price;
+        }
         System.out.println(priceForTheMessage);
 
     }
