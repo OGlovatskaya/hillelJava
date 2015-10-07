@@ -13,8 +13,8 @@ public class Callers {
 
         String encryptedMessage = cryption.crypt("Secret message");
         String decryptedMessage = cryption.crypt(encryptedMessage);
-        System.out.println("Encrypted message: " + encryptedMessage);
-        System.out.println("Decrypted message: " + decryptedMessage);
+        System.out.println(encryptedMessage);
+        System.out.println(decryptedMessage);
 
     }
 }
