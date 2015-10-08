@@ -61,13 +61,13 @@ public class HomeWork {
         double rectangleHeight;
 
         if (discriminant < 0) {
-            System.out.println("Rectangle with such parameters does not exist");
+            System.out.println("HomeWorkOOP.Rectangle with such parameters does not exist");
 
         } else {
             rectangleLength = ((halfPerimeter * (-1)) + Math.sqrt(discriminant)) / 2;
             rectangleHeight = ((halfPerimeter * (-1)) - Math.sqrt(discriminant)) / 2;
-            System.out.println("Rectangle length is " + rectangleLength);
-            System.out.println("Rectangle height is " + rectangleHeight);
+            System.out.println("HomeWorkOOP.Rectangle length is " + rectangleLength);
+            System.out.println("HomeWorkOOP.Rectangle height is " + rectangleHeight);
         }
 
     }
