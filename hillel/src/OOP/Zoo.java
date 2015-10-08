@@ -1,14 +1,43 @@
 package OOP;
 
+import java.util.Objects;
+import java.util.concurrent.Callable;
+
 /**
  * Created by OGlovatskaya on 05.10.2015.
  */
 public class Zoo {
     public static void main(String[] args){
+        Cat tomCat1 = new Cat(true, 3, "Tom", "Blue-gray");
+
+        String sound = tomCat1.makeSound();
+        System.out.println(sound);
+
+        Animal animal = new Animal();
         Cat cat = new Cat();
 
-        String sound = cat.makeSound();
-        System.out.println(sound);
+        Animal animalCat = new Cat();
+
+        sound = animalCat.makeSound();
+        System.out.println("Cat is animal " + sound);
+
+        Object cat3 = new Cat();
+
+
+        Object cat1 = new Cat(true, 3, "Tom", "Blue-gray");
+        Object cat2 = new Cat(true, 3, "Tom", "Blue-gray");
+
+        System.out.println("polymorphic equals " + cat1.equals(cat2));
+
+        Object[] objects = new Object[10];
+         objects[0] = "some string";
+         objects[1] = new Cat (true, 3, "Tom", "Blue-gray");
+         objects[2] = System.in;
+
+        for (Object o: objects) {
+            System.out.println(o.toString());
+        }
+
 
 
         //equalsExample();
@@ -28,9 +57,7 @@ public class Zoo {
         Cat tomCat2 = new Cat(true, 3, "Tom", "Blue-gray");
 
         System.out.println(tomCat1 == tomCat2);
-
         tomCat1 = tomCat2;
-
         System.out.println(tomCat1 == tomCat2);
     }
 
@@ -43,7 +70,6 @@ public class Zoo {
         }
 
         Cat tomCat = new Cat(true, 3, "Tom", "Blue-gray");
-
         Cat mursik = new Cat(true, 4, "Myrsik", "Black");
 
         Cat cat = new Cat();
