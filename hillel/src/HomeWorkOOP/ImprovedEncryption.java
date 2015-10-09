@@ -1,7 +1,7 @@
 package HomeWorkOOP;
 
 /**
- * Created by user on 08.10.2015.
+ * Created by user on 09.10.2015.
  */
 public class ImprovedEncryption {
     public String message;
@@ -12,9 +12,9 @@ public class ImprovedEncryption {
         this.key = key;
     }
 
-    public String crypt (String message){
+    public String crypt(String message){
         char[] cryptedMessage = message.toCharArray();
-        for (int i = 0; i < cryptedMessage.length; i++){
+        for (int i=0; i < cryptedMessage.length; i++ ){
             cryptedMessage[i] = (char) (cryptedMessage[i] ^ key[i%key.length]);
         }
         String cryptMessage = String.copyValueOf(cryptedMessage);
