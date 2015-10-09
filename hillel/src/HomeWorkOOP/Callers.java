@@ -11,8 +11,8 @@ public class Callers {
     public static void main(String[] args) {
         cryption();
 
-        Rectangle rectangle = new RectangleTask(30, 50).getRectangle();
-        System.out.println(rectangle);
+        RectangleTask rectangle = new RectangleTask(30, 50);
+        System.out.println(rectangle.getRectangle());
     }
 
     private static void cryption() {
@@ -23,8 +23,10 @@ public class Callers {
 
         String encryptedMessage = cryption.crypt("Secret message");
         String decryptedMessage = cryption.crypt(encryptedMessage);
+        System.out.println("Original message: " + cryption.message);
         System.out.println("Encrypted message: " + encryptedMessage);
         System.out.println("Decrypted message: " + decryptedMessage);
+
 
     }
 

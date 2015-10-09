@@ -18,19 +18,17 @@ public class RectangleTask {
         double discriminant = (Math.pow(halfPerimeter, 2) - 4 * rectangleArea);
         if (discriminant >= 0) {
             return true;
-        } else {
-            return false;
-        }
+        } else return false;
+
+
     }
 
     public Rectangle getRectangle() {
         double halfPerimeter = rectanglePerimeter / (-2);
         double discriminant = (Math.pow(halfPerimeter, 2) - 4 * rectangleArea);
-        double rectangleLength;
-        double rectangleHeight;
         if (hasSolution()) {
-            rectangleLength = ((halfPerimeter * (-1)) + Math.sqrt(discriminant)) / 2;
-            rectangleHeight = ((halfPerimeter * (-1)) - Math.sqrt(discriminant)) / 2;
+            double rectangleLength = ((halfPerimeter * (-1)) + Math.sqrt(discriminant)) / 2;
+            double rectangleHeight = ((halfPerimeter * (-1)) - Math.sqrt(discriminant)) / 2;
             Rectangle rectangle = new Rectangle(rectangleLength, rectangleHeight);
             return rectangle;
         } else return null;
