@@ -5,7 +5,7 @@ import java.util.Scanner;
  * Created by user on 11.10.2015.
  */
 public class ArtificialIntelligence {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
         int maxNumber = 10;
@@ -33,3 +33,5 @@ public class ArtificialIntelligence {
 
     }
 }
+
+
