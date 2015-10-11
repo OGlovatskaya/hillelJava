@@ -1,9 +1,9 @@
-package HierarchyAnimalClasses;
+package HierarchyAnimalsClasses;
 
 /**
  * Created by user on 10.10.2015.
  */
-public class Cat extends Domestic{
+public class Cat extends Domestic {
 
     @Override
     public String makeSound() {

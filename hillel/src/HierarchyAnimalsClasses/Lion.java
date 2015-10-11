@@ -1,9 +1,9 @@
-package HierarchyAnimalClasses;
+package HierarchyAnimalsClasses;
 
 /**
  * Created by user on 10.10.2015.
  */
-public class Lion extends Wild{
+public class Lion extends Wild {
     public Lion (boolean isPredator){
         this.isPredator = isPredator;
     }

@@ -1,4 +1,4 @@
-package HomeWorkOOP;
+package HomeWorkOOP.ImprovedEncryption;
 
 /**
  * Created by user on 09.10.2015.

@@ -1,4 +1,6 @@
-package HomeWorkOOP;
+package HomeWorkOOP.Rectangle;
+
+import HomeWorkOOP.Rectangle.Rectangle;
 
 /**
  * Created by user on 09.10.2015.

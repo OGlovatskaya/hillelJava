@@ -1,10 +1,10 @@
-package HierarchyAnimalClasses;
+package HierarchyAnimalsClasses;
 
 /**
  * Created by user on 10.10.2015.
  */
 public class PrivateZoo {
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         Domestic cat = new Cat();
         cat.name = "Albert";
@@ -15,16 +15,16 @@ public class PrivateZoo {
         System.out.println(dog.makeSound());
 
         Domestic hamster = new Hamster();
-        hamster.name = "Ignat";
+        hamster.name = "Edward";
         System.out.println(hamster.makeSound());
 
-        Domestic guedDog = new GuideDog(false);
-        guedDog.name = "Marley";
-        System.out.println(guedDog.makeSound());
+        Domestic guideDog = new GuideDog(false);
+        guideDog.name = "Patty";
+        System.out.println(guideDog.makeSound());
 
-        Domestic guedDog1 = new GuideDog(true);
-        guedDog1.name = "Mozart";
-        System.out.println(guedDog1.makeSound());
+        Domestic guideDog1 = new GuideDog(true);
+        guideDog1.name = "Selma";
+        System.out.println(guideDog1.makeSound());
 
         Domestic fish = new Fish();
         fish.name = "Julia";
@@ -41,8 +41,5 @@ public class PrivateZoo {
 
         Wild crocodile = new Crocodile(true);
         System.out.println(crocodile.makeSound());
-
-
-
     }
 }

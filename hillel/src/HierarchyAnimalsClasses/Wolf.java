@@ -1,4 +1,6 @@
-package HierarchyAnimalClasses;
+package HierarchyAnimalsClasses;
+
+import HierarchyAnimalsClasses.Wild;
 
 /**
  * Created by user on 10.10.2015.

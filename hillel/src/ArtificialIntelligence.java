@@ -1,4 +1,3 @@
-import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -9,10 +8,9 @@ public class ArtificialIntelligence {
         Scanner scanner = new Scanner(System.in);
         String answer;
 
-        Random random = new Random();
-        int maxNumber = 10;
+        int maxNumber = 100;
         int minNumber = 0;
-        int number = random.nextInt(maxNumber - minNumber) + minNumber;
+        int number = (int) (minNumber + (Math.random() * (maxNumber - minNumber)));
 
         System.out.println("Guess some number and remember it");
 
@@ -21,12 +19,12 @@ public class ArtificialIntelligence {
             answer = scanner.nextLine();
             if (answer.equals("down")) {
                 maxNumber = number;
-                number = random.nextInt(maxNumber - minNumber) + minNumber;
+                number = (int) (minNumber + (Math.random() * (maxNumber - minNumber)));
             } else if (answer.equals("up")) {
                 minNumber = number + 1;
-                number = random.nextInt(maxNumber - minNumber) + minNumber;
+                number = (int) (minNumber + (Math.random() * (maxNumber - minNumber)));
             }
         } while (!answer.equals("yes"));
-        System.out.println("I guessed it!");
+        System.out.println("I guessed it! Your number is " + number + "!");
     }
 }

@@ -1,9 +1,11 @@
-package HierarchyAnimalClasses;
+package HierarchyAnimalsClasses;
+
+import HierarchyAnimalsClasses.Domestic;
 
 /**
  * Created by user on 10.10.2015.
  */
-public class GuideDog extends Domestic{
+public class GuideDog extends Domestic {
 
         public boolean isTrained;
 
