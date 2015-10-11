@@ -21,7 +21,7 @@ public class ArtificialIntelligence {
                 maxNumber = number;
                 number = (int) (minNumber + (Math.random() * (maxNumber - minNumber)));
             } else if (answer.equals("up")) {
-                minNumber = number;
+                minNumber = number + 1;
                 number = (int) (minNumber + (Math.random() * (maxNumber - minNumber)));
             }
         } while (!answer.equals("yes"));
