@@ -7,10 +7,10 @@ public class ImprovedEncryption {
     public String message;
     public char[] key;
 
-    public ImprovedEncryption (String message, char[] key){
+   /* public ImprovedEncryption (String message, char[] key){
         this.message = message;
         this.key = key;
-    }
+    }*/
 
     public String crypt(String message){
         char[] cryptedMessage = message.toCharArray();
