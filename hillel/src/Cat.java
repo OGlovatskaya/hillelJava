@@ -3,7 +3,7 @@ import OOP.Animal;
 /**
  * Created by OGlovatskaya on 05.10.2015.
  */
-public class Cat extends Animal {
+public class Cat  {
     public static final boolean domestic = true;
     public static final boolean predator = true;
 
