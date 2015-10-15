@@ -10,7 +10,7 @@ public class ImprovedEncryptionMain {
         String message = "Secret message";
         crypt.message = message;
         crypt.key = new char[4];
-        crypt.key[0] = 'l';
+        crypt.key[0] = 'f';
         crypt.key[1] = 'l';
         crypt.key[2] = 'h';
         crypt.key[3] = 'n';

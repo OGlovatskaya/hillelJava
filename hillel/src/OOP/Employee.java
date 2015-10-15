@@ -20,7 +20,7 @@ public class Employee extends Human implements Vaccinable {
     }
 
     public void vaccinated (String vaccinated) {
-        vaccines[vaccineCounter] = vaccinated; //vaccines[vaccineCounter] = vaccinated;
+        vaccines[vaccineCounter] = vaccinated; //vaccines[vaccineCounter++] = vaccinated;
         vaccineCounter++;
     }
 
