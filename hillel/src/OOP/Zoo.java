@@ -15,14 +15,16 @@ public class Zoo {
 
         //Animal animal = new Animal();
         Cat cat = new Cat();
+        //cat.name = "Tom";
 
         Animal animalCat = new Cat();
 
         sound = animalCat.makeSound();
         System.out.println("Cat is animal " + sound);
 
-        Object cat3 = new Cat();
+        //cat.age = 3;
 
+        Object cat3 = new Cat();
 
         Object cat1 = new Cat(true, 3, "Tom", "Blue-gray");
         Object cat2 = new Cat(true, 3, "Tom", "Blue-gray");
@@ -34,8 +36,17 @@ public class Zoo {
         Animal someAnimal = new Cat();
         System.out.println(someAnimal.makeSound());
 
+        Animal anotherAnimal = new Cat();
+        System.out.println(anotherAnimal.someField);
 
+        Cat cat11 = (Cat) anotherAnimal;
+        System.out.println(cat11.someField);
 
+        System.out.println(cat.getTypeName());
+        System.out.println(Cat.getTypeName());
+
+        System.out.println(anotherAnimal.getTypeName());
+        System.out.println(Animal.getTypeName());
 
         //equalsExample();
         //referenceComparison();
@@ -49,11 +60,10 @@ public class Zoo {
         objects[1] = new Cat(true, 3, "Tom", "Blue-gray"); //OOP.Cat(true, 3, "Tom", "Blue-gray");
         objects[2] = System.in;
 
-        for (Object o : objects) {
-            System.out.println(o.toString());
+//        for (Object o : objects) {
+//            System.out.println(o.toString());
         }
-
-    }
+//    }
 
     private static void equalsExample() {
         Cat tomCat1 = new Cat(true, 3, "Tom", "Blue-gray");
@@ -83,11 +93,11 @@ public class Zoo {
         Cat mursik = new Cat(true, 4, "Myrsik", "Black");
 
         Cat cat = new Cat();
-        System.out.println("Cat's name " + cat.name);
-        System.out.println("Cat is pet " + cat.pet);
+        //System.out.println("Cat's name " + cat.name);
+        //System.out.println("Cat is pet " + cat.pet);
 
-        System.out.println(tomCat.name);
-        System.out.println(mursik.age);
+        //System.out.println(tomCat.name);
+        //System.out.println(mursik.age);
         System.out.println(mursik.predator);
     }
 }

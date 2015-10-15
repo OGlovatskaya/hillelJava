@@ -7,18 +7,18 @@ public class AbstractZooExample {
     public static void main(String[] args){
 
         printSound(new Cat());
-        printSound(new Dog());
+        //printSound(new Dog());
 
         Cat cat = new Cat();
-        Dog dog = new Dog();
+        //Dog dog = new Dog();
         vaccinated(cat);
-        vaccinated(dog);
+        //vaccinated(dog);
 
         Employee employee = new Employee();
         vaccinated(employee);
 
         System.out.println(cat); //=System.out.println(cat.toString());
-        System.out.println(dog.toString());
+        //System.out.println(dog.toString());
         System.out.println(employee);
 
         Employee employee1 = new Employee();
@@ -27,7 +27,7 @@ public class AbstractZooExample {
         Vaccinable vaccinable = employee1;
 
         human = new Human();
-        employee1 = (Employee) human;
+        //employee1 = (Employee) human;
         employee1.vaccinated("sdfr");
 
     }
