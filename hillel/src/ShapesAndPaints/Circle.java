@@ -18,28 +18,24 @@ public class Circle extends Shape{
     @Override
     public double getPerimeter() {
         double perimeter = 2 * Math.PI * radius;
-        return perimeter = new BigDecimal(perimeter).setScale(2, RoundingMode.UP).doubleValue();
+        return new BigDecimal(perimeter).setScale(2, RoundingMode.UP).doubleValue();
     }
 
     @Override
     public double getArea() {
         double area = Math.PI * Math.pow(radius, 2);
-        return area = new BigDecimal(area).setScale(2, RoundingMode.UP).doubleValue();
-    }
-
-    public String getColor(){
-        return paint.getColor();
+        return new BigDecimal(area).setScale(2, RoundingMode.UP).doubleValue();
     }
 
     public double paintConsumption(){
-        double paintConsumption;
-        return paintConsumption = getArea() * paint.paintConsumption();
+        return getArea() * paint.paintConsumption();
     }
 
     @Override
     public String toString() {
         return "Circle's radius is " + radius +
                 "; " + super.toString() + "; circle's color is " +
-                getColor() + "; paint consumption is " + paintConsumption() + ".";
+                paint.getColor() + "; paint consumption is " + paintConsumption() + ".";
     }
+
 }

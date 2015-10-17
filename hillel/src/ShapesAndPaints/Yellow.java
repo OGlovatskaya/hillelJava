@@ -1,14 +1,13 @@
 package ShapesAndPaints;
 
 /**
- * Created by user on 14.10.2015.
+ * Created by user on 18.10.2015.
  */
-public class Blue extends Paint{
-
+public class Yellow extends Paint {
     public String getColor(){
-        return "blue";
+        return "yellow";
     }
     public double paintConsumption(){
-        return 3;
+        return 4;
     }
 }
