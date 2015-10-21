@@ -2,6 +2,8 @@ package Incapsulation;
 
 import java.util.Arrays;
 
+import static java.util.Arrays.*;
+
 /**
  * Created by OGlovatskaya on 15.10.2015.
  */
@@ -11,7 +13,7 @@ public class ImprovedArray {
 
     public void add(int i){
         if (ints.length == size()){
-        resize();}
+            resize();}
         ints[counter] = i;
         counter++;
     }
@@ -35,3 +37,10 @@ public class ImprovedArray {
                 '}';
     }
 }
+
+
+        //public void remove(int index)
+        //public void remove(Object obj)
+
+
+

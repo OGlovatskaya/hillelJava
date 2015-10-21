@@ -99,5 +99,7 @@ public class Zoo {
         //System.out.println(tomCat.name);
         //System.out.println(mursik.age);
         System.out.println(mursik.predator);
+
+        Human human = new Human();
     }
 }
