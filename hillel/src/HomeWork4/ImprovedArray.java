@@ -1,4 +1,5 @@
 package HomeWork4;
+
 import java.util.Arrays;
 
 import static java.util.Arrays.*;
@@ -33,7 +34,7 @@ public class ImprovedArray {
 
     public boolean equals(ImprovedArray other) {
         if (this == other) return true;
-        if (other == null || getClass() != other.getClass()) return false;
+        //if (other == null || getClass() != other.getClass()) return false;
         if (counter != other.counter) return false;
         return Arrays.equals(ints, other.ints);
     }
@@ -50,7 +51,7 @@ public class ImprovedArray {
     }
 
     public boolean contains(Object obj) {
-        for (int i = 0; i < counter; i++){
+        for (int i = 0; i < counter; i++) {
             if (ints[i].equals(obj)) {
                 return true;
             }
@@ -58,23 +59,33 @@ public class ImprovedArray {
         return false;
     }
 
-    public void remove(int index){
-        if (index < counter){
+    public void remove(int index) {
+        if (index < counter) {
             int numMoved = counter - index - 1;
-                System.arraycopy(ints, index+1, ints, index,
-                        numMoved);
+            System.arraycopy(ints, index + 1, ints, index,
+                    numMoved);
             counter--;
         }
     }
 
-    public void remove(Object obj){
-        for(int index = 0; index < counter; index++){
-           if (obj.equals(ints[index])){
-               int numMoved = counter - index - 1;
-               System.arraycopy(ints, index+1, ints, index,
-                       numMoved);
-               counter--;
-           }
+    public void remove(Object obj) {
+        for (int index = 0; index < counter; index++) {
+            if (obj.equals(ints[index])) {
+                int numMoved = counter - index - 1;
+                System.arraycopy(ints, index + 1, ints, index,
+                        numMoved);
+                counter--;
+            }
         }
     }
+
+    public void addAndReplace(int index, Object obj) {
+        ints[index - 1] = obj;
+        System.arraycopy(this.ints, index, ints, index, ints.length - index);
+    }
 }
+
+
+
+
+

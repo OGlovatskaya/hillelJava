@@ -1,5 +1,7 @@
 package HomeWork4;
 
+import HomeWork7.BubbleSort;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -7,7 +9,7 @@ import java.util.Arrays;
  * Created by user on 21.10.2015.
  */
 public class ImprovedArrayMain {
-    public static void main(String [] args){
+    public static void main(String [] args) {
         ImprovedArray array = new ImprovedArray();
         array.add("a");
         array.add("b");
@@ -37,11 +39,15 @@ public class ImprovedArrayMain {
 
         System.out.println(array.get(2));
 
+        array1.addIn(1, "v");
+        System.out.println(array1);
+
         /*ArrayList arrayList = new ArrayList();
         arrayList.remove(5);
-        arrayList.remove("b");*/
-
-
-
+        arrayList.remove("b");
+        arrayList.add();
+        arrayList.ensureCapacity();*/
     }
+
 }
+
