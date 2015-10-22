@@ -32,7 +32,7 @@ public class SortingTestClass {
 
         cats[0] = cat;
         cats[1] = cat2;
-        
+
         Sorter sorter = new Sorter();
         Cat [] sorted = ((Cat[]) sorter.sort(cats));
 

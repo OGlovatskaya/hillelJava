@@ -15,6 +15,7 @@ public class Zoo {
 
         //Animal animal = new Animal();
         Cat cat = new Cat();
+        //Animal cat1 = new Cat(false, 5, "tom", "black");
         //cat.name = "Tom";
 
         Animal animalCat = new Cat();

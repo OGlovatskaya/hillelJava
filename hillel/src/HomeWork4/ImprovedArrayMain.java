@@ -39,7 +39,7 @@ public class ImprovedArrayMain {
 
         System.out.println(array.get(2));
 
-        array1.addIn(1, "v");
+        array1.addAndReplace(1, "v");
         System.out.println(array1);
 
         /*ArrayList arrayList = new ArrayList();
