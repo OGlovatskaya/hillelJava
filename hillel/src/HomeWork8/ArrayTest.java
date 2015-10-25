@@ -15,9 +15,9 @@ public class ArrayTest {
         array.add("b");
         array.add("r");
         array.add("t");
+
         System.out.println(array);
     }
-
 
     @Test
     public void size(){
@@ -66,6 +66,55 @@ public class ArrayTest {
         array.add("r");
         array.add("t");
 
-        //System.out.println(array.removeByIndex(0));
+        array.removeByIndex(0);
+        System.out.println(array.toString());
+    }
+
+    @Test
+    public void removeByValue(){
+        ImprovedArray array = new ImprovedArray();
+        array.add("v");
+        array.add("b");
+        array.add("r");
+        array.add("t");
+
+        array.removeByValue("t");
+        System.out.println(array.toString());
+    }
+
+    @Test
+    public void addAndReplace(){
+        ImprovedArray array = new ImprovedArray();
+        array.add("v");
+        array.add("b");
+        array.add("r");
+        array.add("t");
+
+        array.addAndReplace(0, "m");
+        System.out.println(array.toString());
+    }
+
+    @Test
+    public void clean(){
+        ImprovedArray array = new ImprovedArray();
+        array.add("v");
+        array.add("b");
+        array.add("r");
+        array.add("t");
+
+        array.clean();
+        System.out.println(array);
+    }
+
+    @Test
+    public void isEmpty(){
+        ImprovedArray array = new ImprovedArray();
+        array.add("v");
+        array.add("b");
+        array.add("r");
+        array.add("t");
+
+        //array.clean();
+        System.out.println(array.isEmpty());
     }
 }

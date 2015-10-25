@@ -1,10 +1,14 @@
 package TDD;
 
+import HomeWork4.ImprovedArray;
+import HomeWork7.BubbleSort;
 import OOP.Cat;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Arrays;
+
+import static org.junit.Assert.*;
 
 /**
  * Created by OGlovatskaya on 19.10.2015.
@@ -20,7 +24,7 @@ public class SortingTestClass {
 
         Integer[] expected = {111,222,333,444,555,666,777,888,999};
 
-        Assert.assertArrayEquals("Sorting is broken", expected, sorted);
+        assertArrayEquals("Sorting is broken", expected, sorted);
 
     }
 
@@ -37,7 +41,7 @@ public class SortingTestClass {
         Cat [] sorted = ((Cat[]) sorter.sort(cats));
 
         Cat[] expected = {cat2, cat};
-        Assert.assertArrayEquals("Cats aren't sorted", expected, sorted);
+        assertArrayEquals("Cats aren't sorted", expected, sorted);
     }
 
     @Test
@@ -48,6 +52,6 @@ public class SortingTestClass {
         Sorter sorter = new Sorter();
         sorter.sort(unsorted);
 
-        Assert.assertArrayEquals("Sorting is broken", expected, unsorted);
+        assertArrayEquals("Sorting is broken", expected, unsorted);
     }
 }

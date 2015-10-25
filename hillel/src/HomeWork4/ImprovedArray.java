@@ -3,16 +3,18 @@ package HomeWork4;
 import java.util.Arrays;
 
 import static java.util.Arrays.*;
-
+import java.util.Objects;
+import java.util.concurrent.Callable;
 
 /**
  * Created by user on 21.10.2015.
  */
 public class ImprovedArray {
-    private Object[] ints = new String[10];
+    private Comparable[] ints = new Comparable[10];
+    //private Object[] ints = new String[10];
     private int counter = 0;
 
-    public void add(Object value) {
+    public void add(Comparable value) {
         if (ints.length == size()) {
             resize();
         }
@@ -28,12 +30,17 @@ public class ImprovedArray {
         return counter;
     }
 
-    public Object get(int index) {
+    public Comparable get(int index) {
         return ints[index];
     }
 
 
     public boolean equals(ImprovedArray other) {
+        if (this == other) return true;
+        /*for (int i = 0; i < size(); i++){
+            if (ints[i] == other[i])
+        }*/
+        if (counter != other.counter) return false;
         return Arrays.equals(ints, other.ints);
     }
 
@@ -48,7 +55,7 @@ public class ImprovedArray {
         return string + "]" + ", counter = " + counter;
     }
 
-    public boolean contains(Object obj) {
+    public boolean contains(Comparable obj) {
         for (int i = 0; i < counter; i++) {
             if (ints[i].equals(obj)) {
                 return true;
@@ -66,7 +73,7 @@ public class ImprovedArray {
         }
     }
 
-    public void remove(Object obj) {
+    public void removeByValue(Comparable obj) {
         for (int index = 0; index < counter; index++) {
             if (obj.equals(ints[index])) {
                 int numMoved = counter - index - 1;
@@ -77,9 +84,24 @@ public class ImprovedArray {
         }
     }
 
-    public void addAndReplace(int index, Object obj) {
+    public void addAndReplace(int index, Comparable obj) {
         ints[index] = obj;
         System.arraycopy(this.ints, index, ints, index, ints.length - index);
+    }
+
+    public void clean() {
+        for (int i = 0; i < counter; i++){
+            ints[i]=null;
+            counter = 0;
+        }
+    }
+
+    public boolean isEmpty() {
+        for (int i = 0; i < counter; i++){
+            if (ints[i] != null){
+                return false;
+            }
+        } return true;
     }
 }
 

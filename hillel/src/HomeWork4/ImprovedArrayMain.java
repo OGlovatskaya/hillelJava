@@ -1,11 +1,7 @@
 package HomeWork4;
 
+
 import HomeWork7.BubbleSort;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-
-import static java.lang.System.*;
 
 /**
  * Created by user on 21.10.2015.
@@ -36,15 +32,13 @@ public class ImprovedArrayMain {
         array.removeByIndex(4);
         System.out.println(array);
 
-        array1.remove("f");
+        array1.removeByValue("d");
         System.out.println(array1);
 
         System.out.println(array.get(2));
 
         array1.addAndReplace(1, "v");
         System.out.println(array1);
-
     }
-
 }
 
