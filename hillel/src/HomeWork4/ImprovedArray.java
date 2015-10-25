@@ -32,10 +32,8 @@ public class ImprovedArray {
         return ints[index];
     }
 
+
     public boolean equals(ImprovedArray other) {
-        if (this == other) return true;
-        //if (other == null || getClass() != other.getClass()) return false;
-        if (counter != other.counter) return false;
         return Arrays.equals(ints, other.ints);
     }
 
@@ -59,7 +57,7 @@ public class ImprovedArray {
         return false;
     }
 
-    public void remove(int index) {
+    public void removeByIndex(int index) {
         if (index < counter) {
             int numMoved = counter - index - 1;
             System.arraycopy(ints, index + 1, ints, index,
@@ -80,12 +78,9 @@ public class ImprovedArray {
     }
 
     public void addAndReplace(int index, Object obj) {
-        ints[index - 1] = obj;
+        ints[index] = obj;
         System.arraycopy(this.ints, index, ints, index, ints.length - index);
     }
 }
-
-
-
 
 

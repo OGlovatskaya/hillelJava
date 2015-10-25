@@ -5,6 +5,8 @@ import HomeWork7.BubbleSort;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import static java.lang.System.*;
+
 /**
  * Created by user on 21.10.2015.
  */
@@ -31,7 +33,7 @@ public class ImprovedArrayMain {
         System.out.println(array.equals(array1));
         System.out.println(array.contains("j"));
 
-        array.remove(4);
+        array.removeByIndex(4);
         System.out.println(array);
 
         array1.remove("f");
@@ -42,11 +44,6 @@ public class ImprovedArrayMain {
         array1.addAndReplace(1, "v");
         System.out.println(array1);
 
-        /*ArrayList arrayList = new ArrayList();
-        arrayList.remove(5);
-        arrayList.remove("b");
-        arrayList.add();
-        arrayList.ensureCapacity();*/
     }
 
 }
