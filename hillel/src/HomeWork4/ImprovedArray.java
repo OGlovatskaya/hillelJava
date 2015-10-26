@@ -36,11 +36,6 @@ public class ImprovedArray {
 
 
     public boolean equals(ImprovedArray other) {
-        if (this == other) return true;
-        /*for (int i = 0; i < size(); i++){
-            if (ints[i] == other[i])
-        }*/
-        if (counter != other.counter) return false;
         return Arrays.equals(ints, other.ints);
     }
 
