@@ -4,15 +4,17 @@ package Patterns.Ducks;
  * Created by OGlovatskaya on 26.10.2015.
  */
 public abstract class Duck {
+    FlyBehavior flyBehavior;
+    QuackBehavior quackBehavior;
 
     public String quack(){
-        return "quack";
+        return quackBehavior.quack();
     }
 
     abstract String display();
 
     public String fly(){
-        return "I'm flying!";
+        return flyBehavior.fly();
     }
 
     public String swim(){
