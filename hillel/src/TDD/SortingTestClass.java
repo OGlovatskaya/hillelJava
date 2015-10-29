@@ -54,4 +54,25 @@ public class SortingTestClass {
 
         assertArrayEquals("Sorting is broken", expected, unsorted);
     }
+
+    @Test public void bubbleSort(){
+        ImprovedArray unsorted = new ImprovedArray();
+        unsorted.add("b");
+        unsorted.add("a");
+        unsorted.add("c");
+
+        ImprovedArray expected = new ImprovedArray();
+        expected.add("a");
+        expected.add("b");
+        expected.add("c");
+
+        BubbleSort bubbleSort = new BubbleSort();
+        ImprovedArray sorted = bubbleSort.bubbleSort(unsorted);
+
+        System.out.println(sorted.equals(expected));
+
+        //assertArrayEquals("Sorting is broken", expected, unsorted);
+    }
+
+
 }

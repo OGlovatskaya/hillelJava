@@ -4,7 +4,6 @@ import java.util.Arrays;
 
 import static java.util.Arrays.*;
 import java.util.Objects;
-import java.util.concurrent.Callable;
 
 /**
  * Created by user on 21.10.2015.
@@ -34,9 +33,13 @@ public class ImprovedArray {
         return ints[index];
     }
 
-
-    public boolean equals(ImprovedArray other) {
-        return Arrays.equals(ints, other.ints);
+    public boolean equals(Object other) {
+        ImprovedArray intsOther = (ImprovedArray) other;
+        if (this.size() != intsOther.size()) return false;
+        if (this.counter != intsOther.counter) return false;
+        for (int i = 0; i < this.size(); i++) {
+            if (this.ints[i] != (intsOther.get(i))) return false;
+        } return true;
     }
 
     @Override
@@ -81,7 +84,7 @@ public class ImprovedArray {
 
     public void addAndReplace(int index, Comparable obj) {
         ints[index] = obj;
-        System.arraycopy(this.ints, index, ints, index, ints.length - index);
+        //System.arraycopy(this.ints, index, ints, index, ints.length - index);
     }
 
     public void clean() {

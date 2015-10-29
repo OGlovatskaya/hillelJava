@@ -22,20 +22,56 @@ public class BubbleSort {
         return array;
     }
 
-    /*public ImprovedArray bubbleSort(ImprovedArray array) {
+    public static void print(int[] a){
+        int count=a.length;
+        System.out.print("[" + a[0] + ", ");
+        for(int i=1;i<count-1;i++){
+            System.out.print(a[i]+", ");
+        }
+        System.out.println(a[count - 1] + "]");
+    }
+
+
+    /*public Comparable[] bubbleSort(ImprovedArray array) {
+        for (int i = array.length - 1; i > 0; i--) {
+            for (int j = 0; j < i; j++) {
+                Comparable first = array[j];
+                Comparable second = array[j + 1];
+
+                int g = first.compareTo(second);
+
+                if (g > 0) {
+                    Comparable tmp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = tmp;
+                }
+            }
+        }
+        return array;
+    }*/
+
+
+    public ImprovedArray bubbleSort(ImprovedArray array) {
         int length = array.size();
         for (int i = length - 1; i > 0; i--)
             for (int j = 0; j < i; j++) {
                 int g = array.get(j).compareTo(array.get(j + 1));
                 if (g > 0) {
-
-                    /*int j1 = (int) array.get(j);
                     Comparable tmp = array.get(j);
-                    array[j] = array.get(j + 1);
-                    array[j + 1] = tmp;*/
-                /*}
+                    array.addAndReplace(j, array.get(j+1));
+                    array.addAndReplace(j+1, tmp);
+                }
             }
         return array;
-    }*/
+    }
+
+    public static void print(ImprovedArray a){
+        int count=a.size();
+        System.out.print("[" + a.get(0) + ", ");
+        for(int i=1;i<count-1;i++){
+            System.out.print(a.get(i)+", ");
+        }
+        System.out.println(a.get(count - 1) + "]");
+    }
 }
 
