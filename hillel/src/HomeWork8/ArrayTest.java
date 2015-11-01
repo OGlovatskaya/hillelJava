@@ -20,6 +20,17 @@ public class ArrayTest {
     }
 
     @Test
+    public void get(){
+        ImprovedArray array = new ImprovedArray();
+        array.add("v");
+        array.add("b");
+        array.add("r");
+        array.add("t");
+
+        System.out.println(array.get(2));
+    }
+
+    @Test
     public void size(){
         ImprovedArray array = new ImprovedArray();
         array.add("v");
@@ -91,6 +102,18 @@ public class ArrayTest {
         array.add("t");
 
         array.addAndReplace(0, "m");
+        System.out.println(array.toString());
+    }
+
+    @Test
+    public void addAndMove(){
+        ImprovedArray array = new ImprovedArray();
+        array.add("v");
+        array.add("b");
+        array.add("r");
+        array.add("t");
+
+        array.addAndMove(0, "s");
         System.out.println(array.toString());
     }
 

@@ -26,10 +26,18 @@ public class ImprovedArrayMain {
         array1.add("d");
         array1.add("e");
 
-        /*System.out.println(array1.toString());
+        System.out.println(array1.equals(array));
+
+        array1.addAndMove(4, "m");
+
+        System.out.println(array1.toString());
+
+        array1.addAndMove(3, "c");
+
+        System.out.println(array1.toString());
 
         System.out.println(array.equals(array1));
-        System.out.println(array.contains("j"));*/
+        System.out.println(array.contains("j"));
 
         array.removeByIndex(4);
         System.out.println(array.toString());
