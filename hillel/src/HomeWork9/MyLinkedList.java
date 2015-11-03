@@ -1,22 +1,21 @@
 package HomeWork9;
 
 /**
- * Created by user on 28.10.2015.
+ * Created by user on 03.11.2015.
  */
-public class ImprovedLinkedList {
+public class MyLinkedList implements MyList {
 
-    private ImprovedListElement head;
-    private int counter = 0;
+    private MyListElement head;
 
     public void add(Object object) {
         if (head == null) {
-            head = new ImprovedListElement(object);
+            head = new MyListElement(object);
         } else {
-            ImprovedListElement current = head;
+            MyListElement current = head;
             while (current.next != null) {
                 current = current.next;
             }
-            current.next = new ImprovedListElement(object);
+            current.next = new MyListElement(object);
         }
     }
 
@@ -27,7 +26,7 @@ public class ImprovedLinkedList {
         if (index < 0 || index > size()) {
             return null;
         } else {
-            ImprovedListElement current = head;
+            MyListElement current = head;
             for (int i = 1; i <= index; i++) {
                 current = current.next;
             }
@@ -39,7 +38,7 @@ public class ImprovedLinkedList {
         if (head == null) {
             return 0;
         } else {
-            ImprovedListElement current = head;
+            MyListElement current = head;
             int counter = 1;
             while (current.next != null) {
                 current = current.next;
@@ -50,7 +49,7 @@ public class ImprovedLinkedList {
     }
 
     public boolean equals(Object other) {
-        ImprovedLinkedList list = (ImprovedLinkedList) other;
+        MyLinkedList list = (MyLinkedList) other;
         if (this.size() != list.size()) return false;
         for (int i = 0; i < this.size(); i++) {
             if (!(list.get(i).equals(this.get(i)))) {
@@ -63,7 +62,7 @@ public class ImprovedLinkedList {
     @Override
     public String toString() {
         String string = "[ ";
-        ImprovedListElement current;
+        MyListElement current;
         for (current = head; current != null; current = current.next) {
             string += current.value + " ";
         }
@@ -71,7 +70,7 @@ public class ImprovedLinkedList {
     }
 
     public boolean contains(Object object) {
-        ImprovedListElement current;
+        MyListElement current;
         for (current = head; current != null; current = current.next) {
             if (object.equals(current.value)) {
                 return true;
@@ -87,7 +86,7 @@ public class ImprovedLinkedList {
             if (index == 0) {
                 head = head.next;
             } else {
-                ImprovedListElement current = head;
+                MyListElement current = head;
                 for (int i = 0; i < index - 1; i++) {
                     current = current.next;
                 }
@@ -100,8 +99,8 @@ public class ImprovedLinkedList {
         if (head.value.equals(object)) {
             head = head.next;
         } else {
-            ImprovedListElement current = head;
-            ImprovedListElement previous = null;
+            MyListElement current = head;
+            MyListElement previous = null;
             while (!(current.value.equals(object))) {
                 previous = current;
                 current = current.next;
@@ -111,47 +110,40 @@ public class ImprovedLinkedList {
     }
 
     public void addAndMove(int index, Object object) {
-        ImprovedListElement temp = new ImprovedListElement(object);
-        ImprovedListElement current = head;
+        MyListElement temp = new MyListElement(object);
+        MyListElement current = head;
         if (index == 0) {
-            head = new ImprovedListElement(object);
+            head = new MyListElement(object);
             head.next = current;
-        } else {
-        for (int i = 1; i < index; i++) {
-            current = current.next;
-        }
-        temp.next = current.next;
-        current.next = temp;
-        counter++;
-        }
-    }
-
-    /*public void addAndReplace(int index, Object object) {
-        ImprovedListElement temp = new ImprovedListElement(object);
-        ImprovedListElement current = head;
-        if (index == 0) {
-            head = temp;
-            temp.next = current.next;
-            //head.next = current;
         } else {
             for (int i = 1; i < index; i++) {
                 current = current.next;
-                //current.value = temp;
             }
-            //current.value = temp;
-            temp.next = current;
-            current = temp;
-            //current = temp;
-            //counter++;
+            temp.next = current.next;
+            current.next = temp;
         }
-    }*/
+    }
+
+    public void addAndReplace(int index, Object object) {
+        MyListElement temp = new MyListElement(object);
+        MyListElement current = head;
+        if (index == 0) {
+            head = temp;
+            temp.next = current.next;
+        } else {
+            for (int i = 0; i < index; i++) {
+                current = current.next;
+            }
+            current.value = temp.value;
+            temp.next = current.next;
+        }
+    }
 
     public void clean() {
-        ImprovedListElement current = head;
+        MyListElement current = head;
         head = null;
         for (int i = 0; i < size(); i++) {
             current = current.next = null;
-            counter = 0;
         }
     }
 

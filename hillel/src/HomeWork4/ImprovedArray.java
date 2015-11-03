@@ -1,5 +1,7 @@
 package HomeWork4;
 
+import HomeWork9.MyList;
+
 import java.util.Arrays;
 
 import static java.util.Arrays.*;
@@ -8,7 +10,7 @@ import java.util.Objects;
 /**
  * Created by user on 21.10.2015.
  */
-public class ImprovedArray {
+public class ImprovedArray /*implements MyList*/{
     private Comparable[] ints = new Comparable[10];
     //private Object[] ints = new String[10];
     //private String[] ints = new String[10];
