@@ -56,7 +56,7 @@ public class ImprovedArrayMain {
         BubbleSort bubbleSort = new BubbleSort();
         int[] sortedInts = bubbleSort.bubbleSort(ints);
 
-        bubbleSort.print(sortedInts);
+        //bubbleSort.print(sortedInts);
 
         ImprovedArray unsorted = new ImprovedArray();
         unsorted.add(1);
@@ -75,7 +75,7 @@ public class ImprovedArrayMain {
         BubbleSort bubbleSort1 = new BubbleSort();
         ImprovedArray sorted = bubbleSort1.bubbleSort(unsorted);
 
-        bubbleSort1.print(sorted);
+        //bubbleSort1.print(sorted);
 
         LinkedList list = new LinkedList();
         list.toString();

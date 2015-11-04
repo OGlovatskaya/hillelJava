@@ -22,16 +22,6 @@ public class BubbleSort {
         return array;
     }
 
-    public static void print(int[] a){
-        int count=a.length;
-        System.out.print("[" + a[0] + ", ");
-        for(int i=1;i<count-1;i++){
-            System.out.print(a[i]+", ");
-        }
-        System.out.println(a[count - 1] + "]");
-    }
-
-
     /*public Comparable[] bubbleSort(ImprovedArray array) {
         for (int i = array.length - 1; i > 0; i--) {
             for (int j = 0; j < i; j++) {
@@ -50,7 +40,6 @@ public class BubbleSort {
         return array;
     }*/
 
-
     public ImprovedArray bubbleSort(ImprovedArray array) {
         int length = array.size();
         for (int i = length - 1; i > 0; i--)
@@ -63,15 +52,6 @@ public class BubbleSort {
                 }
             }
         return array;
-    }
-
-    public static void print(ImprovedArray a){
-        int count=a.size();
-        System.out.print("[" + a.get(0) + ", ");
-        for(int i=1;i<count-1;i++){
-            System.out.print(a.get(i)+", ");
-        }
-        System.out.println(a.get(count - 1) + "]");
     }
 }
 

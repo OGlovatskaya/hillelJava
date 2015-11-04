@@ -1,5 +1,12 @@
 package HomeWork9;
 
+import HomeWork4.ImprovedArray;
+import HomeWork7.SelectionSort;
+
+import java.awt.*;
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 /**
  * Created by user on 29.10.2015.
  */
@@ -42,5 +49,7 @@ public class Main {
         list.clean();
         System.out.println(list.toString());
         System.out.println(list.size());
+
+
     }
 }
