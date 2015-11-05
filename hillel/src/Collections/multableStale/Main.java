@@ -68,6 +68,5 @@ public class Main {
         System.out.println("hashCode is: " + seekedCar.hashCode());
         System.out.println("hashSet contains Porsche: " + hashedCars.contains(seekedCar));
         //System.out.println("hashSet contains Porsche: " + hashedCars.contains(new Car("Porsche", 2015)));
-
     }
 }
