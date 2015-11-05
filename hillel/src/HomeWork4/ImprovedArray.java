@@ -1,5 +1,7 @@
 package HomeWork4;
 
+import HomeWork9.MyList;
+
 import java.util.Arrays;
 
 import static java.util.Arrays.*;
@@ -8,10 +10,12 @@ import java.util.Objects;
 /**
  * Created by user on 21.10.2015.
  */
-public class ImprovedArray {
+public class ImprovedArray /*implements MyList*/{
     private Comparable[] ints = new Comparable[10];
     //private Object[] ints = new String[10];
+    //private String[] ints = new String[10];
     private int counter = 0;
+
 
     public void add(Comparable value) {
         if (ints.length == size()) {
@@ -82,9 +86,17 @@ public class ImprovedArray {
         }
     }
 
-    public void addAndReplace(int index, Comparable obj) {
-        ints[index] = obj;
-        //System.arraycopy(this.ints, index, ints, index, ints.length - index);
+    public void addAndReplace(int index, Comparable object) {
+        ints[index] = object;
+    }
+
+    public void addAndMove(int index, Comparable object){
+       if (index>=0 && index <= ints.length){
+           this.resize();
+           System.arraycopy(this.ints, index, this.ints, index+1, this.size() - index);
+           this.ints[index] = object;
+           this.counter++;
+       }
     }
 
     public void clean() {
