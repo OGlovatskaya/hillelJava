@@ -6,6 +6,7 @@ import HomeWork7.SelectionSort;
 import java.awt.*;
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.LinkedList;
 
 /**
  * Created by user on 29.10.2015.
@@ -30,25 +31,28 @@ public class Main {
 
         System.out.println(list.equals(list1));
 
-        list1.addAndMove(4, "q");
+        /*list1.addAndMove(4, "q");
         System.out.println(list1.toString());
         System.out.println(list1.size());
 
         list1.addAndReplace(4, "l");
         System.out.println(list1.toString());
-        System.out.println(list1.size());
+        System.out.println(list1.size());*/
 
-        list1.removeByValue("b");
+        list1.removeByValue("c");
         System.out.println(list1.toString());
         System.out.println(list1.size());
 
-        list1.removeByIndex(4);
+        /*list1.removeByIndex(4);
         System.out.println(list1.toString());
         System.out.println(list1.size());
 
         list.clean();
         System.out.println(list.toString());
-        System.out.println(list.size());
+        System.out.println(list.size());*/
+
+        /*LinkedList list2 = new LinkedList();
+        list2.remove()*/
 
 
     }

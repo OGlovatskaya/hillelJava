@@ -98,14 +98,14 @@ public class MyLinkedList implements MyList {
     public void removeByValue(Object object) {
         if (head.value.equals(object)) {
             head = head.next;
-        } else {
+        }else if (this.contains(object)){
+            int i = 0;
             MyListElement current = head;
-            MyListElement previous = null;
             while (!(current.value.equals(object))) {
-                previous = current;
                 current = current.next;
+                i++;
             }
-            previous.next = previous.next.next;
+            this.removeByIndex(i);
         }
     }
 
