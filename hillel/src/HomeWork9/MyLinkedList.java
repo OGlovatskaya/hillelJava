@@ -1,5 +1,8 @@
 package HomeWork9;
 
+
+import HomeWork12.MyException;
+
 /**
  * Created by user on 03.11.2015.
  */
@@ -81,7 +84,8 @@ public class MyLinkedList implements MyList {
 
     public void removeByIndex(int index) {
         if (index < 0 || index > size()) {
-            System.out.println("Incorrect index");
+            throw new MyException("Incorrect value");
+            //System.out.println("Incorrect index");
         } else {
             if (index == 0) {
                 head = head.next;

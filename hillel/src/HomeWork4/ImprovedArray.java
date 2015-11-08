@@ -1,5 +1,6 @@
 package HomeWork4;
 
+import HomeWork12.MyException;
 import HomeWork9.MyList;
 
 import java.util.Arrays;
@@ -76,15 +77,32 @@ public class ImprovedArray /*implements MyList*/{
     }
 
     public void removeByValue(Comparable obj) {
-        for (int index = 0; index < counter; index++) {
-            if (obj.equals(ints[index])) {
-                int numMoved = counter - index - 1;
-                System.arraycopy(ints, index + 1, ints, index,
-                        numMoved);
-                counter--;
+        if (!(this.contains(obj))) {
+            throw new MyException("Incorrect value");
+        } else {
+            for (int index = 0; index < counter; index++) {
+                if (obj.equals(ints[index])) {
+                    int numMoved = counter - index - 1;
+                    System.arraycopy(ints, index + 1, ints, index,
+                            numMoved);
+                    counter--;
+                }
             }
         }
     }
+
+    /*    public void removeByValue(Comparable obj) {
+        if (this.contains(obj)){
+            for (int index = 0; index < counter; index++) {
+                if (obj.equals(ints[index])) {
+                    int numMoved = counter - index - 1;
+                    System.arraycopy(ints, index + 1, ints, index,
+                            numMoved);
+                    counter--;
+                }
+            }
+        } else throw new MyException("Incorrect value");
+    }*/
 
     public void addAndReplace(int index, Comparable object) {
         ints[index] = object;

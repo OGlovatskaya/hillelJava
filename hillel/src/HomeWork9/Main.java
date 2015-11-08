@@ -13,13 +13,13 @@ import java.util.LinkedList;
  */
 public class Main {
     public static void main(String[] args){
-        MyLinkedList list = new MyLinkedList();
+        /*MyLinkedList list = new MyLinkedList();
         list.add("b");
         list.add("p");
         list.add("v");
         list.add("c");
         list.add("m");
-        System.out.println(list.toString());
+        System.out.println(list.toString());*/
 
         MyLinkedList list1 = new MyLinkedList();
         list1.add("b");
@@ -29,9 +29,9 @@ public class Main {
         list1.add("m");
         System.out.println(list1.toString());
 
-        System.out.println(list.equals(list1));
+        /*System.out.println(list.equals(list1));
 
-        /*list1.addAndMove(4, "q");
+        list1.addAndMove(4, "q");
         System.out.println(list1.toString());
         System.out.println(list1.size());
 
@@ -39,21 +39,17 @@ public class Main {
         System.out.println(list1.toString());
         System.out.println(list1.size());*/
 
-        list1.removeByValue("c");
+        /*list1.removeByValue("p");
+        System.out.println(list1.toString());
+        System.out.println(list1.size());*/
+
+        list1.removeByIndex(5);
         System.out.println(list1.toString());
         System.out.println(list1.size());
 
-        /*list1.removeByIndex(4);
-        System.out.println(list1.toString());
-        System.out.println(list1.size());
-
-        list.clean();
+        /*list.clean();
         System.out.println(list.toString());
         System.out.println(list.size());*/
-
-        /*LinkedList list2 = new LinkedList();
-        list2.remove()*/
-
 
     }
 }

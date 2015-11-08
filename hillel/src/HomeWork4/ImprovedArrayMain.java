@@ -3,6 +3,7 @@ package HomeWork4;
 
 import HomeWork7.BubbleSort;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 /**
@@ -10,14 +11,14 @@ import java.util.LinkedList;
  */
 public class ImprovedArrayMain {
     public static void main(String [] args) {
-        ImprovedArray array = new ImprovedArray();
+        /*ImprovedArray array = new ImprovedArray();
         array.add("a");
         array.add("b");
         array.add("c");
         array.add("d");
         array.add("e");
 
-        System.out.println(array.toString());
+        System.out.println(array.toString());*/
 
         ImprovedArray array1 = new ImprovedArray();
         array1.add("a");
@@ -26,7 +27,7 @@ public class ImprovedArrayMain {
         array1.add("d");
         array1.add("e");
 
-        System.out.println(array1.equals(array));
+        /*System.out.println(array1.equals(array));
 
         array1.addAndMove(4, "m");
 
@@ -40,14 +41,14 @@ public class ImprovedArrayMain {
         System.out.println(array.contains("j"));
 
         array.removeByIndex(4);
-        System.out.println(array.toString());
+        System.out.println(array.toString());*/
 
-        array1.removeByValue("b");
+        array1.removeByValue("o");
         System.out.println(array1);
 
-        System.out.println(array.get(2));
+        //System.out.println(array.get(2));
 
-        array1.addAndReplace(1, "v");
+        /*array1.addAndReplace(1, "v");
         System.out.println(array1);
 
         int[] ints = {3,5,7,9,8,4,6,1,2};
@@ -75,12 +76,17 @@ public class ImprovedArrayMain {
         BubbleSort bubbleSort1 = new BubbleSort();
         ImprovedArray sorted = bubbleSort1.bubbleSort(unsorted);
 
-        //bubbleSort1.print(sorted);
+        //bubbleSort1.print(sorted);*/
 
-        LinkedList list = new LinkedList();
-        list.toString();
+        /*ArrayList arrayList = new ArrayList();
+        arrayList.add("o");
+        arrayList.add("b");
+        arrayList.add("n");
 
-
+        System.out.println(arrayList.toString());
+        arrayList.remove("l");
+        arrayList.remove(8);
+        System.out.println(arrayList.toString());*/
     }
 }
 
