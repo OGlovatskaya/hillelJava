@@ -1,22 +1,45 @@
 package Patterns.observer;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by OGlovatskaya on 05.11.2015.
  */
 public class WeatherStation {
-    int temperature;
-    int humidity;
-    int pressure;
+    private int temperature;
+    private int humidity;
+    private int pressure;
 
-    WeatherDisplay current = new WeatherDisplay();
-    WeatherStatistic statistic = new WeatherStatistic();
+    private List<WeatherObserver> observers = new ArrayList<>();
+
+    /*WeatherDisplay current = new WeatherDisplay();
+    WeatherStatistic statistic = new WeatherStatistic();  - programirovanie na yrovne realizacii
+    WeatherForecast forecast = new WeatherForecast();*/
 
     public void measumentChanged(){
+        for (WeatherObserver observer : observers){
+            observer.updateWeather(this);
+        }
+    }
+
+    /*public void measumentChanged(){
         current.set(temperature, humidity, pressure);
         current.display();
 
         statistic.set(temperature, humidity, pressure);
         statistic.display();
+
+        forecast.set(temperature,humidity,pressure);
+        forecast.display();
+    }*/
+
+    public void register(WeatherObserver observer){
+        observers.add(observer);
+    }
+
+    public void removeObserver(WeatherObserver observer){
+
     }
 
     public int getPressure() {
@@ -28,7 +51,6 @@ public class WeatherStation {
     }
 
     public int getTemperature() {
-
         return temperature;
     }
 
