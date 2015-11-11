@@ -7,9 +7,9 @@ import java.util.Arrays;
 /**
  * Created by user on 22.10.2015.
  */
-public class BubbleSort {
+public class BubbleSort extends Sort {
 
-    public int[] bubbleSort(int[] array) {
+    public int[] intSort(int[] array) {
         for (int i = array.length - 1; i > 0; i--) {
             for (int j = 0; j < i; j++) {
                 if (array[j] > array[j + 1]) {
@@ -22,7 +22,21 @@ public class BubbleSort {
         return array;
     }
 
-    /*public Comparable[] bubbleSort(ImprovedArray array) {
+    public ImprovedArray improvedArraySort(ImprovedArray array) {
+        int length = array.size();
+        for (int i = length - 1; i > 0; i--)
+            for (int j = 0; j < i; j++) {
+                int g = array.get(j).compareTo(array.get(j + 1));
+                if (g > 0) {
+                    Comparable tmp = array.get(j);
+                    array.addAndReplace(j, array.get(j + 1));
+                    array.addAndReplace(j + 1, tmp);
+                }
+            }
+        return array;
+    }
+
+    /*public Comparable[] comparableSort(ImprovedArray array) {
         for (int i = array.length - 1; i > 0; i--) {
             for (int j = 0; j < i; j++) {
                 Comparable first = array[j];
@@ -39,19 +53,5 @@ public class BubbleSort {
         }
         return array;
     }*/
-
-    public ImprovedArray bubbleSort(ImprovedArray array) {
-        int length = array.size();
-        for (int i = length - 1; i > 0; i--)
-            for (int j = 0; j < i; j++) {
-                int g = array.get(j).compareTo(array.get(j + 1));
-                if (g > 0) {
-                    Comparable tmp = array.get(j);
-                    array.addAndReplace(j, array.get(j+1));
-                    array.addAndReplace(j+1, tmp);
-                }
-            }
-        return array;
-    }
 }
 

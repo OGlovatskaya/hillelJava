@@ -16,20 +16,20 @@ import static org.junit.Assert.*;
 public class SortingTestClass {
 
     @Test
-    public void sortInAscendingOrder(){
-        Integer[] unsorted = {111,999,777,333,444,666,888,222,555};
+    public void sortInAscendingOrder() {
+        Integer[] unsorted = {111, 999, 777, 333, 444, 666, 888, 222, 555};
 
         Sorter sorter = new Sorter();
         Integer[] sorted = (Integer[]) sorter.sort(unsorted);
 
-        Integer[] expected = {111,222,333,444,555,666,777,888,999};
+        Integer[] expected = {111, 222, 333, 444, 555, 666, 777, 888, 999};
 
         assertArrayEquals("Sorting is broken", expected, sorted);
 
     }
 
     @Test
-    public void catsShouldBeSortedByName(){
+    public void catsShouldBeSortedByName() {
         Cat cat = new Cat(false, 2, "Tom", "black");
         Cat cat2 = new Cat(false, 2, "Cat's name", "white");
         Cat[] cats = new Cat[2];
@@ -38,41 +38,20 @@ public class SortingTestClass {
         cats[1] = cat2;
 
         Sorter sorter = new Sorter();
-        Cat [] sorted = ((Cat[]) sorter.sort(cats));
+        Cat[] sorted = ((Cat[]) sorter.sort(cats));
 
         Cat[] expected = {cat2, cat};
         assertArrayEquals("Cats aren't sorted", expected, sorted);
     }
 
     @Test
-    public void sourceArrayShouldBeUnsorted(){
-        Integer[] unsorted = {111,999,777,333,444,666,888,222,555};
-        Integer[] expected = {111,999,777,333,444,666,888,222,555};
+    public void sourceArrayShouldBeUnsorted() {
+        Integer[] unsorted = {111, 999, 777, 333, 444, 666, 888, 222, 555};
+        Integer[] expected = {111, 999, 777, 333, 444, 666, 888, 222, 555};
 
         Sorter sorter = new Sorter();
         sorter.sort(unsorted);
 
         assertArrayEquals("Sorting is broken", expected, unsorted);
     }
-
-    @Test public void bubbleSort(){
-        ImprovedArray unsorted = new ImprovedArray();
-        unsorted.add("b");
-        unsorted.add("a");
-        unsorted.add("c");
-
-        ImprovedArray expected = new ImprovedArray();
-        expected.add("a");
-        expected.add("b");
-        expected.add("c");
-
-        BubbleSort bubbleSort = new BubbleSort();
-        ImprovedArray sorted = bubbleSort.bubbleSort(unsorted);
-
-        System.out.println(sorted.equals(expected));
-
-        //assertArrayEquals("Sorting is broken", expected, unsorted);
-    }
-
-
 }

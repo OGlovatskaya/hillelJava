@@ -2,8 +2,10 @@ package HomeWork4;
 
 
 import HomeWork7.BubbleSort;
+import HomeWork7.InsertionSort;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 
 /**
@@ -43,8 +45,8 @@ public class ImprovedArrayMain {
         array.removeByIndex(4);
         System.out.println(array.toString());*/
 
-        array1.removeByValue("o");
-        System.out.println(array1);
+        /*array1.removeByValue("o");
+        System.out.println(array1);*/
 
         //System.out.println(array.get(2));
 
@@ -87,6 +89,31 @@ public class ImprovedArrayMain {
         arrayList.remove("l");
         arrayList.remove(8);
         System.out.println(arrayList.toString());*/
+
+        int[] ints = {8,2,1,7,9,6,3,4,5,0};
+        System.out.println(Arrays.toString(ints));
+        InsertionSort insertionSort = new InsertionSort();
+
+        int[] intsSorted = insertionSort.intSort(ints);
+        System.out.println(Arrays.toString(intsSorted));
+
+        ImprovedArray array = new ImprovedArray();
+        array.add(9);
+        array.add(5);
+        array.add(7);
+        array.add(6);
+        array.add(4);
+        array.add(1);
+        array.add(3);
+        array.add(2);
+        array.add(0);
+        array.add(8);
+        System.out.println(array.toString());
+
+        InsertionSort insertionSort1 = new InsertionSort();
+        ImprovedArray arraySorted = insertionSort1.improvedArraySort(array);
+        System.out.println(arraySorted.toString());
+
     }
 }
 
