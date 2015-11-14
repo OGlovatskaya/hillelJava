@@ -27,7 +27,8 @@ public class MyLinkedList implements MyList {
             return null;
         }
         if (index < 0 || index > size()) {
-            return null;
+            throw new MyException("Incorrect index");
+            //return null;
         } else {
             MyListElement current = head;
             for (int i = 1; i <= index; i++) {
@@ -84,7 +85,7 @@ public class MyLinkedList implements MyList {
 
     public void removeByIndex(int index) {
         if (index < 0 || index > size()) {
-            throw new MyException("Incorrect value");
+            throw new MyException("Incorrect index");
             //System.out.println("Incorrect index");
         } else {
             if (index == 0) {
@@ -102,7 +103,9 @@ public class MyLinkedList implements MyList {
     public void removeByValue(Object object) {
         if (head.value.equals(object)) {
             head = head.next;
-        }else if (this.contains(object)){
+        }else if (!(this.contains(object))) {
+            throw new MyException("Incorrect value");
+        } else {
             int i = 0;
             MyListElement current = head;
             while (!(current.value.equals(object))) {

@@ -6,12 +6,13 @@ import HomeWork9.MyList;
 import java.util.Arrays;
 
 import static java.util.Arrays.*;
+
 import java.util.Objects;
 
 /**
  * Created by user on 21.10.2015.
  */
-public class ImprovedArray /*implements MyList*/{
+public class ImprovedArray /*implements MyList*/ {
     private Comparable[] ints = new Comparable[10];
     //private Object[] ints = new String[10];
     //private String[] ints = new String[10];
@@ -35,7 +36,10 @@ public class ImprovedArray /*implements MyList*/{
     }
 
     public Comparable get(int index) {
-        return ints[index];
+        if (index < 0 || index > size()) {
+            throw new MyException("Incorrect index");
+        } else
+            return ints[index];
     }
 
     public boolean equals(Object other) {
@@ -44,7 +48,8 @@ public class ImprovedArray /*implements MyList*/{
         if (this.counter != intsOther.counter) return false;
         for (int i = 0; i < this.size(); i++) {
             if (this.ints[i] != (intsOther.get(i))) return false;
-        } return true;
+        }
+        return true;
     }
 
     @Override
@@ -68,7 +73,9 @@ public class ImprovedArray /*implements MyList*/{
     }
 
     public void removeByIndex(int index) {
-        if (index < counter) {
+        if (index < 0 || index > size()) {
+            throw new MyException("Incorrect index");
+        } else {
             int numMoved = counter - index - 1;
             System.arraycopy(ints, index + 1, ints, index,
                     numMoved);
@@ -91,45 +98,38 @@ public class ImprovedArray /*implements MyList*/{
         }
     }
 
-    /*    public void removeByValue(Comparable obj) {
-        if (this.contains(obj)){
-            for (int index = 0; index < counter; index++) {
-                if (obj.equals(ints[index])) {
-                    int numMoved = counter - index - 1;
-                    System.arraycopy(ints, index + 1, ints, index,
-                            numMoved);
-                    counter--;
-                }
-            }
-        } else throw new MyException("Incorrect value");
-    }*/
-
     public void addAndReplace(int index, Comparable object) {
-        ints[index] = object;
+        if (index < 0 || index > size()) {
+            throw new MyException("Incorrect index");
+        } else
+            ints[index] = object;
     }
 
-    public void addAndMove(int index, Comparable object){
-       if (index>=0 && index <= ints.length){
-           this.resize();
-           System.arraycopy(this.ints, index, this.ints, index+1, this.size() - index);
-           this.ints[index] = object;
-           this.counter++;
-       }
+    public void addAndMove(int index, Comparable object) {
+        if (index < 0 || index > size()) {
+            throw new MyException("Incorrect index");
+        } else {
+            this.resize();
+            System.arraycopy(this.ints, index, this.ints, index + 1, this.size() - index);
+            this.ints[index] = object;
+            this.counter++;
+        }
     }
 
     public void clean() {
-        for (int i = 0; i < counter; i++){
-            ints[i]=null;
+        for (int i = 0; i < counter; i++) {
+            ints[i] = null;
             counter = 0;
         }
     }
 
     public boolean isEmpty() {
-        for (int i = 0; i < counter; i++){
-            if (ints[i] != null){
+        for (int i = 0; i < counter; i++) {
+            if (ints[i] != null) {
                 return false;
             }
-        } return true;
+        }
+        return true;
     }
 }
 

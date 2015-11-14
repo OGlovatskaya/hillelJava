@@ -12,15 +12,15 @@ import java.util.LinkedList;
  * Created by user on 21.10.2015.
  */
 public class ImprovedArrayMain {
-    public static void main(String [] args) {
-        /*ImprovedArray array = new ImprovedArray();
+    public static void main(String[] args) {
+        ImprovedArray array = new ImprovedArray();
         array.add("a");
         array.add("b");
         array.add("c");
         array.add("d");
         array.add("e");
 
-        System.out.println(array.toString());*/
+        System.out.println(array.toString());
 
         ImprovedArray array1 = new ImprovedArray();
         array1.add("a");
@@ -29,7 +29,7 @@ public class ImprovedArrayMain {
         array1.add("d");
         array1.add("e");
 
-        /*System.out.println(array1.equals(array));
+        System.out.println(array1.equals(array));
 
         array1.addAndMove(4, "m");
 
@@ -43,23 +43,16 @@ public class ImprovedArrayMain {
         System.out.println(array.contains("j"));
 
         array.removeByIndex(4);
-        System.out.println(array.toString());*/
+        System.out.println(array.toString());
 
-        /*array1.removeByValue("o");
-        System.out.println(array1);*/
-
-        //System.out.println(array.get(2));
-
-        /*array1.addAndReplace(1, "v");
+        array1.removeByValue("o");
         System.out.println(array1);
 
-        int[] ints = {3,5,7,9,8,4,6,1,2};
-        int[] expectedInts = {1,2,3,4,5,6,7,8,9};
+        System.out.println(array.get(2));
 
-        BubbleSort bubbleSort = new BubbleSort();
-        int[] sortedInts = bubbleSort.bubbleSort(ints);
+        array1.addAndReplace(1, "v");
+        System.out.println(array1);
 
-        //bubbleSort.print(sortedInts);
 
         ImprovedArray unsorted = new ImprovedArray();
         unsorted.add(1);
@@ -75,12 +68,8 @@ public class ImprovedArrayMain {
         unsorted.add(11);
         unsorted.add(10);
 
-        BubbleSort bubbleSort1 = new BubbleSort();
-        ImprovedArray sorted = bubbleSort1.bubbleSort(unsorted);
 
-        //bubbleSort1.print(sorted);*/
-
-        /*ArrayList arrayList = new ArrayList();
+        ArrayList arrayList = new ArrayList();
         arrayList.add("o");
         arrayList.add("b");
         arrayList.add("n");
@@ -88,32 +77,7 @@ public class ImprovedArrayMain {
         System.out.println(arrayList.toString());
         arrayList.remove("l");
         arrayList.remove(8);
-        System.out.println(arrayList.toString());*/
-
-        int[] ints = {8,2,1,7,9,6,3,4,5,0};
-        System.out.println(Arrays.toString(ints));
-        InsertionSort insertionSort = new InsertionSort();
-
-        int[] intsSorted = insertionSort.intSort(ints);
-        System.out.println(Arrays.toString(intsSorted));
-
-        ImprovedArray array = new ImprovedArray();
-        array.add(9);
-        array.add(5);
-        array.add(7);
-        array.add(6);
-        array.add(4);
-        array.add(1);
-        array.add(3);
-        array.add(2);
-        array.add(0);
-        array.add(8);
-        System.out.println(array.toString());
-
-        InsertionSort insertionSort1 = new InsertionSort();
-        ImprovedArray arraySorted = insertionSort1.improvedArraySort(array);
-        System.out.println(arraySorted.toString());
-
+        System.out.println(arrayList.toString());
     }
 }
 

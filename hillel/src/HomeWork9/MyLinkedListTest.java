@@ -84,7 +84,7 @@ public class MyLinkedListTest {
         list.add("c");
         list.add("m");
 
-        list.removeByIndex(10);
+        list.removeByIndex(2);
         System.out.println(list.toString());
     }
 
@@ -97,7 +97,7 @@ public class MyLinkedListTest {
         list.add("c");
         list.add("m");
 
-        list.removeByValue("v");
+        list.removeByValue("b");
         System.out.println(list.toString());
     }
 
