@@ -12,14 +12,14 @@ import java.util.Objects;
 /**
  * Created by user on 21.10.2015.
  */
-public class ImprovedArray /*implements MyList*/ {
-    private Comparable[] ints = new Comparable[10];
-    //private Object[] ints = new String[10];
+public class ImprovedArray implements MyList, Comparable<ImprovedArray> {
     //private String[] ints = new String[10];
+    //private Comparable[] ints = new Comparable[10];
+    private Object[] ints = new Object[10];
+
     private int counter = 0;
 
-
-    public void add(Comparable value) {
+    public void add(Object value) {
         if (ints.length == size()) {
             resize();
         }
@@ -35,7 +35,7 @@ public class ImprovedArray /*implements MyList*/ {
         return counter;
     }
 
-    public Comparable get(int index) {
+    public Object get(int index) {
         if (index < 0 || index > size()) {
             throw new MyException("Incorrect index");
         } else
@@ -63,7 +63,7 @@ public class ImprovedArray /*implements MyList*/ {
         return string + "]" + ", counter = " + counter;
     }
 
-    public boolean contains(Comparable obj) {
+    public boolean contains(Object obj) {
         for (int i = 0; i < counter; i++) {
             if (ints[i].equals(obj)) {
                 return true;
@@ -83,7 +83,7 @@ public class ImprovedArray /*implements MyList*/ {
         }
     }
 
-    public void removeByValue(Comparable obj) {
+    public void removeByValue(Object obj) {
         if (!(this.contains(obj))) {
             throw new MyException("Incorrect value");
         } else {
@@ -98,14 +98,14 @@ public class ImprovedArray /*implements MyList*/ {
         }
     }
 
-    public void addAndReplace(int index, Comparable object) {
+    public void addAndReplace(int index, Object object) {
         if (index < 0 || index > size()) {
             throw new MyException("Incorrect index");
         } else
             ints[index] = object;
     }
 
-    public void addAndMove(int index, Comparable object) {
+    public void addAndMove(int index, Object object) {
         if (index < 0 || index > size()) {
             throw new MyException("Incorrect index");
         } else {
@@ -131,6 +131,11 @@ public class ImprovedArray /*implements MyList*/ {
         }
         return true;
     }
+
+    @Override
+    public int compareTo(ImprovedArray array) {
+        if (this.equals(array)) {
+            return 0;
+        } else return 1;
+    }
 }
-
-

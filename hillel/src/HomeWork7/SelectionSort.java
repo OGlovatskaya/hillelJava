@@ -7,6 +7,7 @@ import HomeWork4.ImprovedArray;
  */
 public class SelectionSort extends Sort {
 
+    @Override
     public int[] intSort(int[] array) {
         for (int i = 0; i < array.length - 1; i++) {
             int smallIndex = i;
@@ -22,35 +23,23 @@ public class SelectionSort extends Sort {
         return array;
     }
 
+    @Override
     public ImprovedArray improvedArraySort(ImprovedArray array) {
         for (int i = 0; i < array.size(); i++) {
             int smallIndex = i;
-            for (int j = i + 1; j < array.size(); j++)
-                if (array.get(j).compareTo(array.get(smallIndex)) < 0) {
+            for (int j = i + 1; j < array.size(); j++) {
+                Comparable first = (Comparable) array.get(j);
+                Comparable second = (Comparable) array.get(smallIndex);
+                if (first.compareTo(second) < 0) {
                     smallIndex = j;
                 }
+            }
             if (smallIndex != i) {
-                Comparable tmp = array.get(smallIndex);
+                Comparable tmp = (Comparable) array.get(smallIndex);
                 array.addAndReplace(smallIndex, array.get(i));
                 array.addAndReplace(i, tmp);
             }
         }
         return array;
     }
-
-    /*public Comparable[] comparableSort(ImprovedArray array) {
-        for (int i = 0; i < array.size(); i++) {
-            int smallIndex = i;
-            for (int j = i + 1; j < array.size(); j++)
-                if (array.get(j).compareTo(array.get(smallIndex)) < 0) {
-                    smallIndex = j;
-                }
-            if (smallIndex != i) {
-                Comparable tmp = array.get(smallIndex);
-                array.addAndReplace(smallIndex, array.get(i));
-                array.addAndReplace(i, tmp);
-            }
-        }
-        return array;
-    }*/
 }

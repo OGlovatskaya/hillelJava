@@ -9,6 +9,7 @@ import java.util.Arrays;
  * Created by user on 11.11.2015.
  */
 public class InsertionSortTest {
+
     @Test
     public void intSort() {
         int[] ints = {8, 6, 9, 1, 7, 4, 5, 3, 2, 0};

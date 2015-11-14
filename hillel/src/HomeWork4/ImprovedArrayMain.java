@@ -78,6 +78,7 @@ public class ImprovedArrayMain {
         arrayList.remove("l");
         arrayList.remove(8);
         System.out.println(arrayList.toString());
+
     }
 }
 

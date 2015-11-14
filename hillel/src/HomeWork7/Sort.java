@@ -11,5 +11,4 @@ public abstract class Sort {
 
     abstract ImprovedArray improvedArraySort(ImprovedArray array);
 
-    //abstract Comparable[] comparableSort();
 }

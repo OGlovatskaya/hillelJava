@@ -75,7 +75,6 @@ public class Cat extends Animal implements Comparable<Cat>{
         return "Cat";
     }
 
-
     @Override
     public int compareTo(Cat o) {
         if(this.equals(o)){

@@ -9,6 +9,7 @@ import java.util.Arrays;
  */
 public class BubbleSort extends Sort {
 
+    @Override
     public int[] intSort(int[] array) {
         for (int i = array.length - 1; i > 0; i--) {
             for (int j = 0; j < i; j++) {
@@ -22,36 +23,22 @@ public class BubbleSort extends Sort {
         return array;
     }
 
+    @Override
     public ImprovedArray improvedArraySort(ImprovedArray array) {
         int length = array.size();
         for (int i = length - 1; i > 0; i--)
             for (int j = 0; j < i; j++) {
-                int g = array.get(j).compareTo(array.get(j + 1));
+                Comparable first = (Comparable) array.get(j);
+                Comparable second = (Comparable) array.get(j + 1);
+                int g = first.compareTo(second);
                 if (g > 0) {
-                    Comparable tmp = array.get(j);
+                    Comparable tmp = (Comparable) array.get(j);
                     array.addAndReplace(j, array.get(j + 1));
                     array.addAndReplace(j + 1, tmp);
                 }
             }
         return array;
     }
-
-    /*public Comparable[] comparableSort(ImprovedArray array) {
-        for (int i = array.length - 1; i > 0; i--) {
-            for (int j = 0; j < i; j++) {
-                Comparable first = array[j];
-                Comparable second = array[j + 1];
-
-                int g = first.compareTo(second);
-
-                if (g > 0) {
-                    Comparable tmp = array[j];
-                    array[j] = array[j + 1];
-                    array[j + 1] = tmp;
-                }
-            }
-        }
-        return array;
-    }*/
 }
+
 
