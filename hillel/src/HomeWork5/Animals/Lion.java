@@ -1,10 +1,10 @@
-package HomeWork5;
+package HomeWork5.Animals;
 
 /**
  * Created by user on 10.10.2015.
  */
-public class Crocodile extends Wild {
-    public Crocodile (boolean isPredator){
+public class Lion extends Wild {
+    public Lion (boolean isPredator){
         this.isPredator = isPredator;
     }
 

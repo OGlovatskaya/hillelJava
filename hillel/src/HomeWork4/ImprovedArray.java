@@ -12,7 +12,7 @@ import java.util.Objects;
 /**
  * Created by user on 21.10.2015.
  */
-public class ImprovedArray implements MyList, Comparable<ImprovedArray> {
+public class ImprovedArray implements MyList{
     //private String[] ints = new String[10];
     //private Comparable[] ints = new Comparable[10];
     private Object[] ints = new Object[10];
@@ -130,12 +130,5 @@ public class ImprovedArray implements MyList, Comparable<ImprovedArray> {
             }
         }
         return true;
-    }
-
-    @Override
-    public int compareTo(ImprovedArray array) {
-        if (this.equals(array)) {
-            return 0;
-        } else return 1;
     }
 }

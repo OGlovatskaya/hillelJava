@@ -1,6 +1,6 @@
-package HomeWork5;
+package HomeWork5.Animals;
 
-import HomeWork5.Animal;
+import HomeWork5.Animals.Animal;
 
 /**
  * Created by user on 10.10.2015.

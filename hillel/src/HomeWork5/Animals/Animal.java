@@ -1,4 +1,4 @@
-package HomeWork5;
+package HomeWork5.Animals;
 
 /**
  * Created by user on 10.10.2015.
