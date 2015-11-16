@@ -23,9 +23,9 @@ public class SelectionSortTest {
     @Test
     public void improvedArraySort() {
         ImprovedArray array = new ImprovedArray();
+        array.add("c");
         array.add("b");
         array.add("f");
-        array.add("c");
         array.add("a");
         array.add("e");
         array.add("d");
