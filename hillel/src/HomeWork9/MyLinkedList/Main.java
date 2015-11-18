@@ -1,4 +1,4 @@
-package HomeWork9;
+package HomeWork9.MyLinkedList;
 
 
 /**

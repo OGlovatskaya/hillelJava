@@ -1,6 +1,7 @@
 package HomeWork7;
 
 import HomeWork4.ImprovedArray;
+import HomeWork5.Animals.Cat;
 import org.junit.Test;
 
 import java.util.Arrays;

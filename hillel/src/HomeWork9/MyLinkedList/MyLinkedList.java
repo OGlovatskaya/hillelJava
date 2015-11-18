@@ -1,4 +1,4 @@
-package HomeWork9;
+package HomeWork9.MyLinkedList;
 
 
 import HomeWork12.MyException;

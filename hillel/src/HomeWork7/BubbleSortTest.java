@@ -1,9 +1,10 @@
 package HomeWork7;
 
 import HomeWork4.ImprovedArray;
+import OOP.Cat;
 import org.junit.Test;
-
 import java.util.Arrays;
+
 
 /**
  * Created by user on 11.11.2015.
@@ -21,7 +22,7 @@ public class BubbleSortTest {
 
     @Test
     public void improvedArraySort() {
-        ImprovedArray array = new ImprovedArray();
+        /*ImprovedArray array = new ImprovedArray();
         array.add(5);
         array.add(9);
         array.add(6);
@@ -32,6 +33,19 @@ public class BubbleSortTest {
         array.add(8);
         array.add(7);
         array.add(2);
+        System.out.println(array.toString());
+
+        BubbleSort bubbleSort = new BubbleSort();
+        ImprovedArray arraySorted = bubbleSort.improvedArraySort(array);
+        System.out.println(arraySorted.toString());*/
+
+        Cat tom = new Cat(false, 4, "Tom", "Black");
+        Cat murzik = new Cat(true, 3, "Murzik", "White");
+        Cat barsik = new Cat(false, 6, "Barsik", "Blue");
+        ImprovedArray array = new ImprovedArray();
+        array.add(tom);
+        array.add(murzik);
+        array.add(barsik);
         System.out.println(array.toString());
 
         BubbleSort bubbleSort = new BubbleSort();

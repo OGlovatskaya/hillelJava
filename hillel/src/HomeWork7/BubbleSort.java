@@ -39,6 +39,24 @@ public class BubbleSort extends Sort {
             }
         return array;
     }
+
+
+    /*public Comparable[] comparableSort (Comparable[] array){
+        int length = array.length;
+        for (int i = length - 1; i > 0; i--){
+            for (int j = 0; j < i; j++){
+                Comparable first = array[j];
+                Comparable second = array[j+1];
+                int g = first.compareTo(second);
+                if (g > 0){
+                    Comparable tmp = array[j];
+                    array[j] = array[j+1];
+                    array[j+1] = tmp;
+                }
+            }
+        }
+        return array;
+    }*/
 }
 
 

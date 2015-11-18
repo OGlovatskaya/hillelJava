@@ -1,13 +1,9 @@
 package HomeWork4;
 
 import HomeWork12.MyException;
-import HomeWork9.MyList;
-
-import java.util.Arrays;
+import HomeWork9.MyLinkedList.MyList;
 
 import static java.util.Arrays.*;
-
-import java.util.Objects;
 
 /**
  * Created by user on 21.10.2015.

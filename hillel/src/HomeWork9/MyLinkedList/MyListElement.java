@@ -1,4 +1,4 @@
-package HomeWork9;
+package HomeWork9.MyLinkedList;
 
 /**
  * Created by user on 03.11.2015.

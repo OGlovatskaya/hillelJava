@@ -1,5 +1,6 @@
-package HomeWork9;
+package HomeWork9.MyLinkedList;
 
+import HomeWork9.MyLinkedList.MyLinkedList;
 import org.junit.Test;
 
 /**
