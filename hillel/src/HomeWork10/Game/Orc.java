@@ -1,4 +1,6 @@
-package HomeWork10;
+package HomeWork10.Game;
+
+import HomeWork10.Game.Game;
 
 /**
  * Created by user on 04.11.2015.

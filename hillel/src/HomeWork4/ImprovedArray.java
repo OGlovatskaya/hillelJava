@@ -1,14 +1,17 @@
 package HomeWork4;
 
+import HomeWork10.ImprovedArrayIterator;
 import HomeWork12.MyException;
 import HomeWork9.MyLinkedList.MyList;
+
+import java.util.Iterator;
 
 import static java.util.Arrays.*;
 
 /**
  * Created by user on 21.10.2015.
  */
-public class ImprovedArray implements MyList{
+public class ImprovedArray implements MyList, Iterable{
     //private String[] ints = new String[10];
     //private Comparable[] ints = new Comparable[10];
     private Object[] ints = new Object[10];
@@ -126,5 +129,10 @@ public class ImprovedArray implements MyList{
             }
         }
         return true;
+    }
+
+    @Override
+    public Iterator iterator() {
+        return new ImprovedArrayIterator(this);
     }
 }

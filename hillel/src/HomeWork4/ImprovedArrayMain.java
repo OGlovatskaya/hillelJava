@@ -1,12 +1,9 @@
 package HomeWork4;
 
 
-import HomeWork7.BubbleSort;
-import HomeWork7.InsertionSort;
+import HomeWork10.ImprovedArrayIterator;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
+import java.util.Iterator;
 
 /**
  * Created by user on 21.10.2015.
@@ -68,16 +65,10 @@ public class ImprovedArrayMain {
         unsorted.add(11);
         unsorted.add(10);
 
-
-        ArrayList arrayList = new ArrayList();
-        arrayList.add("o");
-        arrayList.add("b");
-        arrayList.add("n");
-
-        System.out.println(arrayList.toString());
-        arrayList.remove("l");
-        arrayList.remove(8);
-        System.out.println(arrayList.toString());
+        Iterator iterator = new ImprovedArrayIterator(unsorted);
+        while (iterator.hasNext()){
+            System.out.println(iterator.next());
+        }
 
     }
 }

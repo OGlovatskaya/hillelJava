@@ -2,6 +2,7 @@ package Patterns.Iterator;
 
 import Collections.RecursiveLinkedList;
 import OOP.Cat;
+import org.hamcrest.internal.ArrayIterator;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -42,7 +43,6 @@ public class MainIterator {
         while (iterator1.hasNext()){
             System.out.println(iterator1.next());
         }
-
 
     }
 }
