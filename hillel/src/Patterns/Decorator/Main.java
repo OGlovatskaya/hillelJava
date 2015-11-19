@@ -21,7 +21,7 @@ public class Main {
 
         System.out.println(beverage.description());
         System.out.println(beverage.cost());
-        
+
     }
 
     private static void check(int cash, Beverage beverage) {
