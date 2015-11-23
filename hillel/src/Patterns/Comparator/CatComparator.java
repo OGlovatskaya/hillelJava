@@ -10,7 +10,7 @@ import java.util.List;
  * Created by OGlovatskaya on 29.10.2015.
  */
 public class CatComparator {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Cat tom = new Cat(false, 4, "Tom", "Black");
         Cat murzik = new Cat(true, 3, "Murzik", "White");
         Cat barsik = new Cat(false, 6, "Barsik", "Blue");
@@ -37,10 +37,9 @@ public class CatComparator {
         Collections.sort(cats, new Reversed(new SortByAge()));
         System.out.println("sorted by age desc: ");
         print(cats);
-
     }
 
-    public static void print(List<Cat> cats){
+    public static void print(List<Cat> cats) {
         cats.forEach(System.out::println);
     }
 }

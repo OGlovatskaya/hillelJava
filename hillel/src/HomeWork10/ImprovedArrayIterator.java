@@ -26,7 +26,8 @@ public class ImprovedArrayIterator implements Iterator{
 
     }
 
-    /*@Override
+    @Override
     public void remove() {
-    }*/
+        array.removeByIndex(--currentIndex);
+    }
 }

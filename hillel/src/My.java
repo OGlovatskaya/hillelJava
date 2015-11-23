@@ -20,7 +20,9 @@ public class My {
                     numbers[i] = temp;
                 }
             }
-        } System.out.println(Arrays.toString(numbers));
+        }
+        System.out.println(Arrays.toString(numbers));
     }
-
 }
+
+

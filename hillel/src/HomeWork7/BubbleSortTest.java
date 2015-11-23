@@ -1,7 +1,9 @@
 package HomeWork7;
 
+import HomeWork10.DogComparator;
 import HomeWork4.ImprovedArray;
 import OOP.Cat;
+import OOP.Dog;
 import org.junit.Test;
 import java.util.Arrays;
 
@@ -22,7 +24,7 @@ public class BubbleSortTest {
 
     @Test
     public void improvedArraySort() {
-        /*ImprovedArray array = new ImprovedArray();
+        ImprovedArray array = new ImprovedArray();
         array.add(5);
         array.add(9);
         array.add(6);
@@ -37,19 +39,24 @@ public class BubbleSortTest {
 
         BubbleSort bubbleSort = new BubbleSort();
         ImprovedArray arraySorted = bubbleSort.improvedArraySort(array);
-        System.out.println(arraySorted.toString());*/
-
-        Cat tom = new Cat(false, 4, "Tom", "Black");
-        Cat murzik = new Cat(true, 3, "Murzik", "White");
-        Cat barsik = new Cat(false, 6, "Barsik", "Blue");
-        ImprovedArray array = new ImprovedArray();
-        array.add(tom);
-        array.add(murzik);
-        array.add(barsik);
-        System.out.println(array.toString());
-
-        BubbleSort bubbleSort = new BubbleSort();
-        ImprovedArray arraySorted = bubbleSort.improvedArraySort(array);
         System.out.println(arraySorted.toString());
+
+        Dog billy = new Dog("Billy", 5);
+        Dog adam = new Dog("Adam", 2);
+        Dog duke = new Dog("Duke", 1);
+        Dog edward = new Dog("Edward", 3);
+        Dog cody = new Dog("Cody", 6);
+        ImprovedArray dogs = new ImprovedArray();
+        dogs.add(billy);
+        dogs.add(adam);
+        dogs.add(duke);
+        dogs.add(edward);
+        dogs.add(cody);
+        System.out.println(dogs.toString());
+
+        BubbleSort dogsSort = new BubbleSort();
+        ImprovedArray dogsSorted = dogsSort.improvedArraySort(dogs, new DogComparator());
+        System.out.println(dogsSorted.toString());
+
     }
 }

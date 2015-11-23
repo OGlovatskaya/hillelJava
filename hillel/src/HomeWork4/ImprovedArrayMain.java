@@ -2,8 +2,9 @@ package HomeWork4;
 
 
 import HomeWork10.ImprovedArrayIterator;
-
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.ListIterator;
 
 /**
  * Created by user on 21.10.2015.
@@ -51,25 +52,48 @@ public class ImprovedArrayMain {
         System.out.println(array1);
 
 
-        ImprovedArray unsorted = new ImprovedArray();
-        unsorted.add(1);
-        unsorted.add(5);
-        unsorted.add(7);
-        unsorted.add(9);
-        unsorted.add(3);
-        unsorted.add(2);
-        unsorted.add(4);
-        unsorted.add(6);
-        unsorted.add(8);
-        unsorted.add(0);
-        unsorted.add(11);
-        unsorted.add(10);
+        ImprovedArray array2 = new ImprovedArray();
+        array2.add(1);
+        array2.add(5);
+        array2.add(7);
+        array2.add(9);
+        array2.add(3);
+        array2.add(2);
+        array2.add(4);
+        array2.add(6);
+        array2.add(8);
+        array2.add(0);
+        array2.add(11);
+        array2.add(10);
 
-        Iterator iterator = new ImprovedArrayIterator(unsorted);
-        while (iterator.hasNext()){
-            System.out.println(iterator.next());
+        Iterator iterator = new ImprovedArrayIterator(array2);
+        while (iterator.hasNext()) {
+            System.out.print(iterator.next() + " ");
         }
 
+        System.out.println();
+        for (Object o : array2) {
+            System.out.print(o + " ");
+        }
+
+        System.out.println();
+        ArrayList<String> list = new ArrayList<>();
+        list.add("G");
+        list.add("F");
+        list.add("I");
+        list.add("S");
+
+        System.out.println(list.toString());
+
+        ListIterator<String> listIterator = list.listIterator();
+
+        System.out.println(listIterator.next());
+        listIterator.remove();
+        System.out.println(list.toString());
+
+        System.out.println(listIterator.next());
+        listIterator.remove();
+        System.out.println(list.toString());
     }
 }
 
