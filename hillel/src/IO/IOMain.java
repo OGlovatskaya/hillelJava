@@ -22,8 +22,8 @@ public class IOMain {
             Properties properties = new Properties();
             properties.load(fileInputStream);
             String carOwner = properties.getProperty("carOwner");
-            String carYear = properties.getProperty("carYear");
             String carModel = properties.getProperty("carModel");
+            String carYear = properties.getProperty("carYear");
 
             CarOwner owner = new CarOwner(carOwner);
             Car car = new Car(carModel, Integer.parseInt(carYear), owner, "black");
