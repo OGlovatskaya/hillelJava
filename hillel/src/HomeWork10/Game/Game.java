@@ -6,21 +6,21 @@ package HomeWork10.Game;
 public class Game {
     public static void main(String[] args) {
         Character human = new Human();
-        human.weapon = new Bow();
-        print(human);
+        Weapon bow = new Bow();
+        print(human, bow);
 
         Character orc = new Orc();
-        orc.weapon = new Hammer();
-        print(orc);
+        Weapon hammer = new Hammer();
+        print(orc, hammer);
 
         Character elf = new Elf();
-        elf.weapon = new Sword();
-        print(elf);
+        Weapon sword = new Sword();
+        print(elf, sword);
 
     }
 
-    public static void print(Character character){
-        System.out.print(character.display());
-        System.out.println(character.typeOfWeapon());
+    public static void print(Character character, Weapon weapon){
+        character.setWeapon(weapon);
+        System.out.println(character.display());
     }
 }

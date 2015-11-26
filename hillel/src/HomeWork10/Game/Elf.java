@@ -5,7 +5,7 @@ package HomeWork10.Game;
  */
 public class Elf extends Character {
     @Override
-    String display() {
-        return "Elf ";
+    public String display() {
+        return "Elf " + super.display();
     }
 }

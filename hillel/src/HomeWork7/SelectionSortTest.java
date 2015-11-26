@@ -1,7 +1,9 @@
 package HomeWork7;
 
+import HomeWork10.DogComparator;
 import HomeWork4.ImprovedArray;
 import HomeWork5.Animals.Cat;
+import OOP.Dog;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -24,33 +26,38 @@ public class SelectionSortTest {
     @Test
     public void improvedArraySort() {
         ImprovedArray array = new ImprovedArray();
-        array.add("c");
-        array.add("b");
-        array.add("f");
-        array.add("a");
-        array.add("e");
-        array.add("d");
+        array.add(5);
+        array.add(9);
+        array.add(6);
+        array.add(1);
+        array.add(3);
+        array.add(4);
+        array.add(0);
+        array.add(8);
+        array.add(7);
+        array.add(2);
         System.out.println(array.toString());
 
-        SelectionSort sort = new SelectionSort();
-        ImprovedArray arraySorted = sort.improvedArraySort(array);
+        BubbleSort bubbleSort = new BubbleSort();
+        ImprovedArray arraySorted = bubbleSort.improvedArraySort(array);
         System.out.println(arraySorted.toString());
 
-        ImprovedArray array1 = new ImprovedArray();
-        array1.add(5);
-        array1.add(9);
-        array1.add(6);
-        array1.add(1);
-        array1.add(3);
-        array1.add(4);
-        array1.add(0);
-        array1.add(8);
-        array1.add(7);
-        array1.add(2);
-        System.out.println(array1.toString());
+        Dog billy = new Dog("Billy", 5);
+        Dog adam = new Dog("Adam", 2);
+        Dog duke = new Dog("Duke", 1);
+        Dog edward = new Dog("Edward", 3);
+        Dog cody = new Dog("Cody", 6);
 
-        SelectionSort sort1 = new SelectionSort();
-        ImprovedArray array1Sorted = sort1.improvedArraySort(array1);
-        System.out.println(array1Sorted.toString());
+        ImprovedArray dogs = new ImprovedArray();
+        dogs.add(billy);
+        dogs.add(adam);
+        dogs.add(duke);
+        dogs.add(edward);
+        dogs.add(cody);
+        System.out.println(dogs.toString());
+
+        BubbleSort dogsSort = new BubbleSort();
+        ImprovedArray dogsSorted = dogsSort.improvedArraySort(dogs, new DogComparator());
+        System.out.println(dogsSorted.toString());
     }
 }

@@ -2,15 +2,16 @@ package HomeWork7;
 
 import HomeWork4.ImprovedArray;
 
+import java.util.Comparator;
+
 /**
- * Created by user on 11.11.2015.
+ * Created by user on 25.11.2015.
  */
-public abstract class Sort {
+public interface Sort {
+    int[] intSort(int[] array);
 
-    abstract int[] intSort(int[] array);
+    ImprovedArray improvedArraySort(ImprovedArray array);
 
-    abstract ImprovedArray improvedArraySort(ImprovedArray array);
-
-    //abstract public Comparable[] comparableSort (Comparable[] array);
+    ImprovedArray improvedArraySort(ImprovedArray array, Comparator comparator);
 
 }

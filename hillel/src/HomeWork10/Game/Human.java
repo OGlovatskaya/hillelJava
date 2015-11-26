@@ -8,7 +8,7 @@ import HomeWork10.Game.Game;
 public class Human extends Character {
 
     @Override
-    String display() {
-        return "Human ";
+    public String display() {
+        return "Human " + super.display();
     }
 }
