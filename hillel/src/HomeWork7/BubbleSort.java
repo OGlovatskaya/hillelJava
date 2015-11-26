@@ -8,9 +8,9 @@ import java.util.Comparator;
 /**
  * Created by user on 22.10.2015.
  */
-public class BubbleSort /*extends Sort*/ {
+public class BubbleSort implements Sort {
 
-    //@Override
+    @Override
     public int[] intSort(int[] array) {
         for (int i = array.length - 1; i > 0; i--) {
             for (int j = 0; j < i; j++) {
@@ -24,7 +24,7 @@ public class BubbleSort /*extends Sort*/ {
         return array;
     }
 
-    //@Override
+    @Override
     public ImprovedArray improvedArraySort(ImprovedArray array, Comparator comparator) {
         int length = array.size();
         for (int i = length - 1; i > 0; i--)
@@ -35,13 +35,13 @@ public class BubbleSort /*extends Sort*/ {
                     array.addAndReplace(j + 1, tmp);
                 }
             }
-
         return array;
     }
 
+    @Override
     public ImprovedArray improvedArraySort(ImprovedArray array) {
         int length = array.size();
-        for (int i = length - 1; i > 0; i--)
+        for (int i = length - 1; i > 0; i--) {
             for (int j = 0; j < i; j++) {
                 Comparable first = (Comparable) array.get(j);
                 Comparable second = (Comparable) array.get(j + 1);
@@ -52,6 +52,7 @@ public class BubbleSort /*extends Sort*/ {
                     array.addAndReplace(j + 1, tmp);
                 }
             }
+        }
         return array;
     }
 }

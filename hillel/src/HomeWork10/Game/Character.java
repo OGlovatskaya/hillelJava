@@ -4,12 +4,14 @@ package HomeWork10.Game;
  * Created by user on 04.11.2015.
  */
 public abstract class Character {
-    Weapon weapon;
+    private Weapon weapon;
 
-    public String typeOfWeapon(){
-        return weapon.typeOfWeapon();
+    public void setWeapon(Weapon weapon) {
+        this.weapon = weapon;
     }
 
-    abstract String display();
+    public String display(){
+        return weapon.typeOfWeapon();
+    }
 }
 

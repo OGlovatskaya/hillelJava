@@ -5,6 +5,4 @@ package Patterns.Ducks;
  */
 public interface FlyBehavior {
     String fly();
-
-
 }
