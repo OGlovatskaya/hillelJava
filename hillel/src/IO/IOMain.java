@@ -18,7 +18,7 @@ import java.util.Properties;
  */
 public class IOMain {
     public static void main(String[] args) /*throws IOException*/ {
-        try (FileInputStream fileInputStream = new FileInputStream("C:\\Users\\OGlovatskaya\\IdeaProjects\\MyHillelJava\\hillel\\config.properties")){
+        try (FileInputStream fileInputStream = new FileInputStream("C:\\Users\\OGlovatskaya\\IdeaProjects\\MyHillelJava\\hillel\\config.properties")) {
             Properties properties = new Properties();
             properties.load(fileInputStream);
             String carOwner = properties.getProperty("carOwner");
@@ -29,7 +29,7 @@ public class IOMain {
             Car car = new Car(carModel, Integer.parseInt(carYear), owner, "black");
             System.out.println(car);
 
-        }catch (IOException e) {
+        } catch (IOException e) {
             System.out.println(e);
         }
         //serialVersionUID();
@@ -157,7 +157,6 @@ public class IOMain {
 
     private static void autoclosable() {
         try (MyClosable c = new MyClosable()) {
-
         }
     }
 
@@ -226,6 +225,7 @@ public class IOMain {
         }
     }
 }
+
 
 class MyClosable implements AutoCloseable {
 

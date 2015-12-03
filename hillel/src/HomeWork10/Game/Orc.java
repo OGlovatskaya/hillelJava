@@ -1,14 +1,16 @@
 package HomeWork10.Game;
 
-import HomeWork10.Game.Game;
-
 /**
- * Created by user on 04.11.2015.
+ * Created by user on 01.12.2015.
  */
 public class Orc extends Character {
 
+    public Orc() {
+        setCrushingDamage(2);
+    }
+
     @Override
-    public String display() {
-        return "Orc " + super.display();
+    String display() {
+        return "Ocr";
     }
 }

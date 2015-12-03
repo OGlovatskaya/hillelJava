@@ -1,14 +1,15 @@
 package HomeWork10.Game;
 
-import HomeWork10.Game.Game;
-
 /**
- * Created by user on 04.11.2015.
+ * Created by user on 01.12.2015.
  */
 public class Human extends Character {
+    public Human() {
+        setCuttingDamage(3);
+    }
 
     @Override
-    public String display() {
-        return "Human " + super.display();
+    String display() {
+        return "Human";
     }
 }

@@ -1,11 +1,17 @@
 package HomeWork10.Game;
 
 /**
- * Created by user on 04.11.2015.
+ * Created by user on 01.12.2015.
  */
 public class Bow extends Weapon {
+
+    public Bow() {
+        int pierce = (int)(5 + (Math.random() * 6));
+        setPiercingDamage(pierce);
+    }
+
     @Override
-    public String typeOfWeapon() {
-        return "attacked with a bow";
+    String typeOfWeapon() {
+        return "Bow";
     }
 }
