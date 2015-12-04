@@ -1,5 +1,6 @@
 package HomeWork4;
 
+import HomeWork10.ImprovedArrayIterator;
 import HomeWork12.MyException;
 import HomeWork9.MyLinkedList.MyList;
 
