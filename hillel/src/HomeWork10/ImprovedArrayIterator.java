@@ -8,7 +8,7 @@ import java.util.Iterator;
  * Created by user on 19.11.2015.
  */
 public class ImprovedArrayIterator implements Iterator{
-    /*private final ImprovedArray array;
+    private final ImprovedArray array;
     private int currentIndex = 0;
 
     public ImprovedArrayIterator(ImprovedArray array) {
@@ -29,5 +29,5 @@ public class ImprovedArrayIterator implements Iterator{
     @Override
     public void remove() {
         array.removeByIndex(--currentIndex);
-    }*/
+    }
 }
