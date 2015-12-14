@@ -9,6 +9,22 @@ public class Product {
     private String category;
     private int price;
 
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
     public Product(int id, String name, String category, int price) {
         this.id = id;
         this.name = name;
