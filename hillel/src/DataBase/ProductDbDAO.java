@@ -1,8 +1,6 @@
 package DataBase;
 
 
-import Generics.Employee;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +20,16 @@ public class ProductDbDAO implements ProductDAO {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+        Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    connection.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }));
     }
 
     @Override
@@ -126,4 +134,17 @@ public class ProductDbDAO implements ProductDAO {
             throw new RuntimeException(e);
         }
     }
+
+    /*public void close(){
+        try {
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }*/
+
+    /*@Override
+    protected void finalize() throws SQLException {
+        connection.close();
+    }*/
 }
