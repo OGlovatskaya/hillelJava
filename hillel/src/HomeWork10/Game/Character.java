@@ -79,11 +79,12 @@ public abstract class Character extends Thread {
                     int newHealth = this.getHealth() - enemy.totalDamage();
                     if (newHealth >= 0) {
                         this.setHealth(newHealth);
-                        System.out.println(this.display() + " health is " + this.getHealth());
+                        //System.out.println(this.display() + " health is " + this.getHealth());
                     } else {
                         this.setHealth(0);
-                        System.out.println(this.display() + " health is " + this.getHealth());
+                        //System.out.println(this.display() + " health is " + this.getHealth());
                     }
+                    System.out.println(this.display() + " health is " + this.getHealth());
                 } else break;
             } catch (InterruptedException e) {
                 e.printStackTrace();
