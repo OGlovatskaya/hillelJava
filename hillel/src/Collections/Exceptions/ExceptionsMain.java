@@ -57,7 +57,7 @@ public class ExceptionsMain {
         integers.get(1);*/
 
         if (true){
-            throw new Exception("My exception");
+            throw new Exception("Study.My exception");
         }
 
         if (true) {

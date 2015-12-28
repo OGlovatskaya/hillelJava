@@ -7,7 +7,7 @@ public class Hammer extends Weapon {
 
     public Hammer() {
         int crush = (int) (7 + (Math.random() * 2));
-        setCrushingDamage(crush);
+        setDamage(new Damage(0, crush, 0));
     }
 
     @Override

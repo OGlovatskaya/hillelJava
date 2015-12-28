@@ -7,8 +7,9 @@ public class Bow extends Weapon {
 
     public Bow() {
         int pierce = (int)(5 + (Math.random() * 6));
-        setPiercingDamage(pierce);
+        setDamage(new Damage(0, 0, pierce));
     }
+
 
     @Override
     String typeOfWeapon() {

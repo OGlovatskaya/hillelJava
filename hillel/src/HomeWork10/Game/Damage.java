@@ -1,14 +1,28 @@
 package HomeWork10.Game;
 
 /**
- * Created by user on 01.12.2015.
+ * Created by user on 27.12.2015.
  */
-public interface Damage {
-    void setCuttingDamage(int cuttingDamage);
-    void setCrushingDamage(int crushingDamage);
-    void setPiercingDamage(int piercingDamage);
+public class Damage {
+    private int cuttingDamage;
+    private int crushingDamage;
+    private int piercingDamage;
 
-    int getCuttingDamage();
-    int getCrushingDamage();
-    int getPiercingDamage();
+    public Damage(int cuttingDamage, int crushingDamage, int piercingDamage) {
+        this.cuttingDamage = cuttingDamage;
+        this.crushingDamage = crushingDamage;
+        this.piercingDamage = piercingDamage;
+    }
+
+    public int getCuttingDamage() {
+        return cuttingDamage;
+    }
+
+    public int getCrushingDamage() {
+        return crushingDamage;
+    }
+
+    public int getPiercingDamage() {
+        return piercingDamage;
+    }
 }

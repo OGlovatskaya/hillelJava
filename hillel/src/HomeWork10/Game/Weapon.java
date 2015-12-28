@@ -3,39 +3,23 @@ package HomeWork10.Game;
 /**
  * Created by user on 01.12.2015.
  */
-public abstract class Weapon implements Damage{
-    private int cuttingDamage;
-    private int crushingDamage;
-    private int piercingDamage;
+public abstract class Weapon {
+    private Damage damage;
 
-    @Override
-    public void setCuttingDamage(int cuttingDamage) {
-        this.cuttingDamage = cuttingDamage;
+    public void setDamage(Damage damage) {
+        this.damage = damage;
     }
 
-    @Override
-    public void setCrushingDamage(int crushingDamage) {
-        this.crushingDamage = crushingDamage;
-    }
-
-    @Override
-    public void setPiercingDamage(int piercingDamage) {
-        this.piercingDamage = piercingDamage;
-    }
-
-    @Override
     public int getCuttingDamage() {
-        return this.cuttingDamage;
+        return damage.getCuttingDamage();
     }
 
-    @Override
     public int getCrushingDamage() {
-        return this.crushingDamage;
+        return damage.getCrushingDamage();
     }
 
-    @Override
     public int getPiercingDamage() {
-        return this.piercingDamage;
+        return damage.getPiercingDamage();
     }
 
     abstract String typeOfWeapon();

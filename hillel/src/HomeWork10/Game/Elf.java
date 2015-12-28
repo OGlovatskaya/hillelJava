@@ -6,7 +6,7 @@ package HomeWork10.Game;
 public class Elf extends Character {
 
     public Elf() {
-        setPiercingDamage(4);
+        setDamage(new Damage(0, 0, 4));
     }
 
     @Override

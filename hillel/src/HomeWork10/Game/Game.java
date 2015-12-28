@@ -23,6 +23,12 @@ public class Game {
         System.out.println(sword.getCuttingDamage());
         print(elf, sword);
 
+        elf.setEnemy(orc);
+        orc.setEnemy(elf);
+
+        orc.start();
+        elf.start();
+
     }
 
     public static void print(Character character, Weapon weapon) {
@@ -30,5 +36,4 @@ public class Game {
         System.out.print(character.display() + " attacked with a " + weapon.typeOfWeapon());
         System.out.println(",total damage is " + character.totalDamage());
     }
-
 }

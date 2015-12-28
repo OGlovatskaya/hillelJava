@@ -5,7 +5,7 @@ package HomeWork10.Game;
  */
 public class Human extends Character {
     public Human() {
-        setCuttingDamage(3);
+        setDamage(new Damage(3, 0, 0));
     }
 
     @Override
