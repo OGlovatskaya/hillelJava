@@ -9,13 +9,20 @@ public abstract class Character extends Thread {
     private int health = 50;
     private Character enemy;
 
-
     public void setWeapon(Weapon weapon) {
         this.weapon = weapon;
     }
 
     public void setDamage(Damage damage) {
         this.damage = damage;
+    }
+
+    private void setHealth(int health) {
+        this.health = health;
+    }
+
+    public void setEnemy(Character enemy) {
+        this.enemy = enemy;
     }
 
     public int getCuttingDamage() {
@@ -30,18 +37,9 @@ public abstract class Character extends Thread {
         return damage.getPiercingDamage();
     }
 
-    public void setEnemy(Character enemy) {
-        this.enemy = enemy;
-    }
-
     public int getHealth() {
         return health;
     }
-
-    private void setHealth(int health) {
-        this.health = health;
-    }
-
 
     public int totalDamage() {
         int cut = this.getCuttingDamage() + this.weapon.getCuttingDamage();
@@ -79,10 +77,8 @@ public abstract class Character extends Thread {
                     int newHealth = this.getHealth() - enemy.totalDamage();
                     if (newHealth >= 0) {
                         this.setHealth(newHealth);
-                        //System.out.println(this.display() + " health is " + this.getHealth());
                     } else {
                         this.setHealth(0);
-                        //System.out.println(this.display() + " health is " + this.getHealth());
                     }
                     System.out.println(this.display() + " health is " + this.getHealth());
                 } else break;

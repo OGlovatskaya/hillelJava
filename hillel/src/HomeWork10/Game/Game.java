@@ -4,7 +4,7 @@ package HomeWork10.Game;
  * Created by user on 04.11.2015.
  */
 public class Game {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Character human = new Human();
         System.out.println(human.getCuttingDamage());
         Weapon bow = new Bow();
@@ -28,6 +28,9 @@ public class Game {
 
         orc.start();
         elf.start();
+
+        orc.join();
+        elf.join();
 
     }
 
