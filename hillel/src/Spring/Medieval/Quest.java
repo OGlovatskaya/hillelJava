@@ -1,4 +1,4 @@
-package Spring;
+package Spring.Medieval;
 
 /**
  * Created by OGlovatskaya on 28.12.2015.

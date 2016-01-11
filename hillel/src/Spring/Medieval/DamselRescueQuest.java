@@ -1,4 +1,4 @@
-package Spring;
+package Spring.Medieval;
 
 
 /**
@@ -9,5 +9,10 @@ public class DamselRescueQuest implements Quest{
     @Override
     public void embark(){
         System.out.println("Damsel rescuing quest embarked!");
+    }
+
+    @Override
+    public String toString() {
+        return "DamselRescueQuest{}";
     }
 }
