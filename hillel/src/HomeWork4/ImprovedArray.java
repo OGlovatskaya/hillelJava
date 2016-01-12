@@ -11,7 +11,7 @@ import static java.util.Arrays.*;
 /**
  * Created by user on 21.10.2015.
  */
-public class ImprovedArray implements MyList, Iterable{
+public class ImprovedArray implements MyList, Iterable {
     //private String[] ints = new String[10];
     //private Comparable[] ints = new Comparable[10];
     private Object[] ints = new Object[10];
@@ -44,9 +44,8 @@ public class ImprovedArray implements MyList, Iterable{
     public boolean equals(Object other) {
         ImprovedArray intsOther = (ImprovedArray) other;
         if (this.size() != intsOther.size()) return false;
-        if (this.counter != intsOther.counter) return false;
         for (int i = 0; i < this.size(); i++) {
-            if (this.ints[i] != (intsOther.get(i))) return false;
+            if (!this.get(i).equals(intsOther.get(i))) return false;
         }
         return true;
     }
@@ -88,10 +87,7 @@ public class ImprovedArray implements MyList, Iterable{
         } else {
             for (int index = 0; index < counter; index++) {
                 if (obj.equals(ints[index])) {
-                    int numMoved = counter - index - 1;
-                    System.arraycopy(ints, index + 1, ints, index,
-                            numMoved);
-                    counter--;
+                    this.removeByIndex(index);
                 }
             }
         }
@@ -123,10 +119,8 @@ public class ImprovedArray implements MyList, Iterable{
     }
 
     public boolean isEmpty() {
-        for (int i = 0; i < counter; i++) {
-            if (ints[i] != null) {
-                return false;
-            }
+        if (this.get(0) != null){
+            return false;
         }
         return true;
     }

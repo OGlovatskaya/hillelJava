@@ -1,9 +1,11 @@
 package HomeWork10.Game;
 
+import java.io.Serializable;
+
 /**
  * Created by user on 27.12.2015.
  */
-public class Damage {
+public class Damage implements Serializable{
     private int cuttingDamage;
     private int crushingDamage;
     private int piercingDamage;

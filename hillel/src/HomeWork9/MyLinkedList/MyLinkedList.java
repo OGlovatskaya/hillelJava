@@ -120,7 +120,7 @@ public class MyLinkedList implements MyList {
         MyListElement temp = new MyListElement(object);
         MyListElement current = head;
         if (index == 0) {
-            head = new MyListElement(object);
+            head = temp;
             head.next = current;
         } else {
             for (int i = 1; i < index; i++) {

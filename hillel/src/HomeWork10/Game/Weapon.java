@@ -1,9 +1,11 @@
 package HomeWork10.Game;
 
+import java.io.Serializable;
+
 /**
  * Created by user on 01.12.2015.
  */
-public abstract class Weapon {
+public abstract class Weapon implements Serializable{
     private Damage damage;
 
     public void setDamage(Damage damage) {
