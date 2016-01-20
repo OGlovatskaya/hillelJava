@@ -23,14 +23,9 @@ public class Game {
         System.out.println(sword.getCuttingDamage());
         print(elf, sword);
 
-        elf.setEnemy(orc);
-        orc.setEnemy(elf);
-
-        orc.start();
-        elf.start();
-
-        orc.join();
-        elf.join();
+        Fight fight = new Fight(orc, elf);
+        fight.start();
+        fight.join();
 
     }
 
