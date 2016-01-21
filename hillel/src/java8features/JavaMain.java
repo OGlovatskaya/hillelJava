@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-import java.util.function.Predicate;
+import java.util.function.*;
 import java.util.stream.Collectors;
 
 /**
@@ -12,6 +12,40 @@ import java.util.stream.Collectors;
  */
 public class JavaMain {
     public static void main(String[] args) {
+
+        streamExample();
+    }
+
+    private static void functionExample() {
+        List<Apple> apples = createApples(10, (Supplier<Apple>) Apple::new);
+
+        consumeApples(apples, new Consumer<Apple>() {
+            @Override
+            public void accept(Apple apple) {
+                System.out.println(apple);
+            }
+        });
+
+        consumeApples(apples, System.out::println);
+
+        System.out.println(mapToString(apples, Apple::getColor));
+    }
+
+    public static List<String> mapToString(List<Apple> apples, Function<Apple, String> mapper){
+        List<String> strings = new ArrayList<>();
+        for (Apple apple : apples){
+            strings.add(mapper.apply(apple));
+        }
+        return strings;
+    }
+
+    public static void consumeApples(List<Apple> apples, Consumer<Apple> consumer){
+        for (Apple apple : apples){
+            consumer.accept(apple);
+        }
+    }
+
+    private static void streamExample() {
         List<Apple> apples = new ArrayList<>();
         apples.add(new Apple("Red", 150));
         apples.add(new Apple("Green", 180));
@@ -37,13 +71,57 @@ public class JavaMain {
 
         heavyApples = filter(apples, apple -> apple.getWeight() > 170);
 
+        Predicate<Apple> isHeavy = JavaMain::isHeavy;
+
+        Predicate<Apple> isGreen = apple -> apple.getColor().equals("Green");
+
+        Predicate<Apple> isHeavyAndGreen = isGreen.and(isHeavy);
+
         heavyApples = apples
                 .stream()
-                .filter(JavaMain::isHeavy)
-                .filter(apple -> apple.getColor().equals("Red"))
+                .filter(isHeavyAndGreen)
                 .collect(Collectors.toList());
 
+        List<String> colors = apples.stream()
+                //.filter(isHeavyAndGreen)
+                .map(Apple::getColor)
+                //.limit(2)
+                .distinct()
+                .sorted()
+                .collect(Collectors.toList());
+
+        System.out.println(colors);
+
+        /*heavyApples = apples
+                .stream()
+                .filter(isHeavy)
+                .filter(isGreen)
+                .collect(Collectors.toList());*/
+
+        /*heavyApples = apples
+                .stream()
+                .filter(JavaMain::isHeavy)
+                .filter(apple -> apple.getColor().equals("Green"))
+                .collect(Collectors.toList());*/
+
         System.out.println(heavyApples);
+    }
+
+
+    public static List<Apple> createApples(int count, BiFunction<String, Integer, Apple> appleSupplier){
+        List<Apple> apples = new ArrayList<>();
+        for (int i = 0; i < count; i++){
+            apples.add(appleSupplier.apply("Red", 50));
+        }
+        return apples;
+    }
+
+    public static List<Apple> createApples(int count, Supplier<Apple> appleSupplier){
+        List<Apple> apples = new ArrayList<>();
+        for (int i = 0; i < count; i++){
+            apples.add(appleSupplier.get());
+        }
+        return apples;
     }
 
     public static boolean isHeavy(Apple apple) {
@@ -105,9 +183,25 @@ public class JavaMain {
 
         Collections.sort(integers);
 
-        integers.sort(JavaMain::sortIntsAsc);
+        Comparator <Integer> comparator = new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return o1.compareTo(o2);
+            }
+        };
+
+        comparator = JavaMain::sortIntsAsc;
+
+        integers.sort(comparator);
+
+        integers.sort(JavaMain::sortIntsAsc); // :: - ssilka na metod (funkciu), signatyra metoda doljna sovpadat' s opisannoi v metode
 
         integers.sort((o1, o2) -> o1.compareTo(o2));
+
+        integers.sort((o1, o2) -> {
+            System.out.println("comparing " + o1 + " " + o2);
+            return o1.compareTo(o2);                          //esli v liambde bol'she 1 stroki
+        });
 
         List<Integer> ints = Collections.emptyList();
 
