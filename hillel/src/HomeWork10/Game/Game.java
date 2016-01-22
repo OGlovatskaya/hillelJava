@@ -22,11 +22,7 @@ public class Game {
         Weapon sword = new Sword();
         System.out.println(sword.getCuttingDamage());
         print(elf, sword);
-
-        Fight fight = new Fight(orc, elf);
-        fight.start();
-        fight.join();
-
+        
     }
 
     public static void print(Character character, Weapon weapon) {
