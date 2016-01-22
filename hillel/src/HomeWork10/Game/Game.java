@@ -19,23 +19,13 @@ public class Game {
 
                 Thread.sleep(500);
                 if (orc.getHealth() > 0 && elf.getHealth() > 0) {
-                    int newHealth1 = orc.getHealth() - elf.totalDamage();
-                    if (newHealth1 >= 0) {
-                        orc.setHealth(newHealth1);
-                    } else {
-                        orc.setHealth(0);
-                    }
+                    orc.injured(elf.totalDamage());
                     System.out.println(elf.display() + " attacked! " + orc.display() + "'s health is " + orc.getHealth());
                 } else break;
 
                 Thread.sleep(500);
                 if (elf.getHealth() > 0 && orc.getHealth() > 0) {
-                    int newHealth2 = elf.getHealth() - orc.totalDamage();
-                    if (newHealth2 >= 0) {
-                        elf.setHealth(newHealth2);
-                    } else {
-                        elf.setHealth(0);
-                    }
+                    elf.injured(orc.totalDamage());
                     System.out.println(orc.display() + " attacked! " + elf.display() + "'s health is " + elf.getHealth());
                 } else break;
 

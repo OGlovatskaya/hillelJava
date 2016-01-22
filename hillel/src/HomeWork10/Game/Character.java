@@ -27,12 +27,17 @@ public abstract class Character implements Serializable {
         return this.damage;
     }
 
-    public void setHealth(int health) {
-        this.health = health;
+    public void injured(int damage) {
+        this.health -= damage;
     }
 
     public int getHealth() {
-        return health;
+        if (health >= 0){
+            return health;
+        }
+        else {
+            return 0;
+        }
     }
 
     public void saveCharacter() {
