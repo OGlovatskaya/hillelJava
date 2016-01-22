@@ -5,29 +5,51 @@ package HomeWork10.Game;
  */
 public class Game {
     public static void main(String[] args) throws InterruptedException {
-        Character human = new Human();
-        System.out.println(human.getDamage().getCuttingDamage());
-        Weapon bow = new Bow();
-        System.out.println(bow.getDamage().getPiercingDamage());
-        print(human, bow);
-
         Character orc = new Orc();
-        System.out.println(orc.getDamage().getCrushingDamage());
         Weapon hammer = new Hammer();
-        System.out.println(hammer.getDamage().getCrushingDamage());
-        print(orc, hammer);
+        orc.setWeapon(hammer);
+
 
         Character elf = new Elf();
-        System.out.println(elf.getDamage().getPiercingDamage());
         Weapon sword = new Sword();
-        System.out.println(sword.getDamage().getCuttingDamage());
-        print(elf, sword);
+        elf.setWeapon(sword);
 
-    }
+        while (true) {
+            try {
 
-    public static void print(Character character, Weapon weapon) {
-        character.setWeapon(weapon);
-        System.out.print(character.display() + " attacked with a " + weapon.typeOfWeapon());
-        System.out.println(",total damage is " + character.totalDamage());
+                Thread.sleep(500);
+                if (orc.getHealth() > 0 && elf.getHealth() > 0) {
+                    int newHealth1 = orc.getHealth() - elf.totalDamage();
+                    if (newHealth1 >= 0) {
+                        orc.setHealth(newHealth1);
+                    } else {
+                        orc.setHealth(0);
+                    }
+                    System.out.println(elf.display() + " attacked! " + orc.display() + "'s health is " + orc.getHealth());
+                } else break;
+
+                Thread.sleep(500);
+                if (elf.getHealth() > 0 && orc.getHealth() > 0) {
+                    int newHealth2 = elf.getHealth() - orc.totalDamage();
+                    if (newHealth2 >= 0) {
+                        elf.setHealth(newHealth2);
+                    } else {
+                        elf.setHealth(0);
+                    }
+                    System.out.println(orc.display() + " attacked! " + elf.display() + "'s health is " + elf.getHealth());
+                } else break;
+
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+
+        if (orc.getHealth() > elf.getHealth()) {
+            System.out.println(orc.display() + " has won!");
+        } else if (elf.getHealth() > orc.getHealth()){
+            System.out.println(elf.display() + " has won!");
+        }
+
+
     }
 }
