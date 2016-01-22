@@ -15,6 +15,10 @@ public abstract class Character implements Serializable {
         this.weapon = weapon;
     }
 
+    public Weapon getWeapon() {
+        return weapon;
+    }
+
     public void setDamage(Damage damage) {
         this.damage = damage;
         damage.setCharacter(this);
@@ -32,9 +36,6 @@ public abstract class Character implements Serializable {
         return health;
     }
 
-    public Weapon getWeapon() {
-        return weapon;
-    }
 
     public void saveCharacter() {
         try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream("C:\\Users\\user\\Desktop\\save.dat"))) {
