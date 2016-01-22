@@ -12,16 +12,8 @@ public abstract class Weapon implements Serializable{
         this.damage = damage;
     }
 
-    public int getCuttingDamage() {
-        return damage.getCuttingDamage();
-    }
-
-    public int getCrushingDamage() {
-        return damage.getCrushingDamage();
-    }
-
-    public int getPiercingDamage() {
-        return damage.getPiercingDamage();
+    public Damage getDamage(){
+        return this.damage;
     }
 
     abstract String typeOfWeapon();

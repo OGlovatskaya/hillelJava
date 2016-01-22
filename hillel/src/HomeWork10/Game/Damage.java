@@ -35,9 +35,9 @@ public class Damage implements Serializable{
     }
 
     public int totalDamage() {
-        int cut = character.getCuttingDamage() + character.getWeapon().getCuttingDamage();
-        int crush = character.getCrushingDamage() + character.getWeapon().getCrushingDamage();
-        int pierce = character.getPiercingDamage() + character.getWeapon().getPiercingDamage();
+        int cut = character.getDamage().getCuttingDamage() + character.getWeapon().getDamage().getCuttingDamage();
+        int crush = character.getDamage().getCrushingDamage() + character.getWeapon().getDamage().getCrushingDamage();
+        int pierce = character.getDamage().getPiercingDamage() + character.getWeapon().getDamage().getPiercingDamage();
 
         int[] ints = {cut, crush, pierce};
         Arrays.sort(ints);

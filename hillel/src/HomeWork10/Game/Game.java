@@ -6,23 +6,23 @@ package HomeWork10.Game;
 public class Game {
     public static void main(String[] args) throws InterruptedException {
         Character human = new Human();
-        System.out.println(human.getCuttingDamage());
+        System.out.println(human.getDamage().getCuttingDamage());
         Weapon bow = new Bow();
-        System.out.println(bow.getPiercingDamage());
+        System.out.println(bow.getDamage().getPiercingDamage());
         print(human, bow);
 
         Character orc = new Orc();
-        System.out.println(orc.getCrushingDamage());
+        System.out.println(orc.getDamage().getCrushingDamage());
         Weapon hammer = new Hammer();
-        System.out.println(hammer.getCrushingDamage());
+        System.out.println(hammer.getDamage().getCrushingDamage());
         print(orc, hammer);
 
         Character elf = new Elf();
-        System.out.println(elf.getPiercingDamage());
+        System.out.println(elf.getDamage().getPiercingDamage());
         Weapon sword = new Sword();
-        System.out.println(sword.getCuttingDamage());
+        System.out.println(sword.getDamage().getCuttingDamage());
         print(elf, sword);
-        
+
     }
 
     public static void print(Character character, Weapon weapon) {

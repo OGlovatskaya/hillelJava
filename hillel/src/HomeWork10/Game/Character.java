@@ -20,20 +20,12 @@ public abstract class Character implements Serializable {
         damage.setCharacter(this);
     }
 
+    public Damage getDamage(){
+        return this.damage;
+    }
+
     public void setHealth(int health) {
         this.health = health;
-    }
-
-    public int getCuttingDamage() {
-        return damage.getCuttingDamage();
-    }
-
-    public int getCrushingDamage() {
-        return damage.getCrushingDamage();
-    }
-
-    public int getPiercingDamage() {
-        return damage.getPiercingDamage();
     }
 
     public int getHealth() {
