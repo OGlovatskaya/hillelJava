@@ -30,10 +30,10 @@ public class Damage implements Serializable {
         return piercingDamage;
     }
 
-    public int totalDamage(Damage otherDamage) {
-        int cut = this.getCuttingDamage() + otherDamage.getCuttingDamage();
-        int crush = this.getCrushingDamage() + otherDamage.getCrushingDamage();
-        int pierce = this.getPiercingDamage() + otherDamage.getPiercingDamage();
+    public int totalDamage() {
+        int cut = this.getCuttingDamage();
+        int crush = this.getCrushingDamage();
+        int pierce = this.getPiercingDamage();
 
         int[] ints = {cut, crush, pierce};
         Arrays.sort(ints);
@@ -46,8 +46,6 @@ public class Damage implements Serializable {
         int cut = this.getCuttingDamage() + otherDamage.getCuttingDamage();
         int crush = this.getCrushingDamage() + otherDamage.getCrushingDamage();
         int pierce = this.getPiercingDamage() + otherDamage.getPiercingDamage();
-
-
 
         return new Damage(cut, crush, pierce);
     }

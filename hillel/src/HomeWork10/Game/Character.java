@@ -21,7 +21,6 @@ public abstract class Character implements Serializable {
 
     public void setDamage(Damage damage) {
         this.damage = damage;
-        damage.setCharacter(this);
     }
 
     public Damage getDamage(){
@@ -35,7 +34,6 @@ public abstract class Character implements Serializable {
     public int getHealth() {
         return health;
     }
-
 
     public void saveCharacter() {
         try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream("C:\\Users\\user\\Desktop\\save.dat"))) {
@@ -76,7 +74,8 @@ public abstract class Character implements Serializable {
     }
 
     public int totalDamage() {
-        return damage.totalDamage();
+        Damage totalDamage = this.getDamage().plus(weapon.getDamage());
+        return totalDamage.totalDamage();
     }
 
     abstract String display();
